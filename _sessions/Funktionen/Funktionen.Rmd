@@ -1,0 +1,243 @@
+---
+title: "Funktionen"
+author: "Einführung in R<br>
+  <a href='https://therbootcamp.github.io'>
+    Basel R Bootcamp
+  </a>
+  <br>
+  <a href='https://therbootcamp.github.io/I2R_2019Nov/'>
+    <i class='fas fa-clock' style='font-size:.9em;'></i>
+  </a>&#8239; 
+  <a href='https://therbootcamp.github.io'>
+    <i class='fas fa-home' style='font-size:.9em;' ></i>
+  </a>&#8239;
+  <a href='mailto:therbootcamp@gmail.com'>
+    <i class='fas fa-envelope' style='font-size: .9em;'></i>
+  </a>&#8239;
+  <a href='https://www.linkedin.com/company/basel-r-bootcamp/'>
+    <i class='fab fa-linkedin' style='font-size: .9em;'></i>
+  </a>"
+date: "November 2019"
+output:
+  xaringan::moon_reader:
+    css: ["default", "baselrbootcamp.css"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9'
+---
+
+layout: true
+
+<div class="my-footer">
+  <span style="text-align:center">
+    <span> 
+      <img src="https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/by-sa.png" height=14 style="vertical-align: middle"/>
+    </span>
+    <a href="https://therbootcamp.github.io/">
+      <span style="padding-left:82px"> 
+        <font color="#7E7E7E">
+          www.therbootcamp.com
+        </font>
+      </span>
+    </a>
+    <a href="https://therbootcamp.github.io/">
+      <font color="#7E7E7E">
+       Einführung in R | November 2019
+      </font>
+    </a>
+    </span>
+  </div> 
+
+---
+
+```{r, eval = TRUE, echo = FALSE, warning=F,message=F}
+# Code to knit slides
+basel <- readr::read_csv("data/basel.txt")
+```
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+# see: https://github.com/yihui/xaringan
+# install.packages("xaringan")
+# see: 
+# https://github.com/yihui/xaringan/wiki
+# https://github.com/gnab/remark/wiki/Markdown
+options(width=110)
+options(digits = 4)
+
+require(tidyverse)
+```
+
+
+
+# Funktionen 
+
+.pull-left4[
+1. Alles geschieht durch eine Funktion
+2. Funktionen haben (Default) Argumente
+3. Die Klasse der Argumente ist wichtig
+4. Funktionen "leben" in Paketen
+5. Erhalte Hilfe mit <mono>?</mono>
+]
+
+.pull-right5[
+<p align="center"><img src="image/input_output.png" height="400"></p>
+]
+
+---
+
+# Funktionen 
+
+.pull-left4[
+1. <high>Alles geschieht durch eine Funktion</high>
+2. Funktionen haben (Default) Argumente
+3. Die Klasse der Argumente ist wichtig
+4. Funktionen "leben" in Paketen
+5. Erhalte Hilfe mit <mono>?</mono>
+]
+
+.pull-right5[
+```{r}
+# Funktion c()
+eins_zwei_drei <- c(1, 2, 3)
+
+# Funktion `+`()
+eins_zwei_drei + 100
+
+# Funktion print()
+eins_zwei_drei
+
+# Funktion mean()
+mean(x = eins_zwei_drei)
+
+```
+]
+
+
+---
+
+# Funktionen 
+
+.pull-left4[
+1. Alles geschieht durch eine Funktion
+2. <high>Funktionen haben (Default) Argumente</high>
+3. Die Klasse der Argumente ist wichtig
+4. Funktionen "leben" in Paketen
+5. Erhalte Hilfe mit <mono>?</mono>
+]
+
+.pull-right5[
+```{r, error=TRUE,tidy=T}
+# Kein Argument
+mean()
+
+# Ein (notwendiges) Argument
+mean(c(1, 2, 3))
+
+# Hinzufügen eines fehlenden Werts (NA)
+mean(c(1, 2, 3, NA))
+
+# Ändere den Default zur Entfernung des NAs
+mean(c(1, 2, 3, NA), na.rm = TRUE)
+
+```
+]
+
+---
+
+# Funktionen 
+
+.pull-left4[
+1. Alles geschieht durch eine Funktion
+2. Funktionen haben (Default) Argumente
+3. <high>Die Klasse der Argumente ist wichtig</high>
+4. Funktionen "leben" in Paketen
+5. Erhalte Hilfe mit <mono>?</mono>
+]
+
+.pull-right5[
+```{r, error=TRUE,tidy=T}
+
+# Berechne Mittelwert von c(1, 2, 3)
+mean(c(1, 2, 3))
+
+# Berechne Mittelwert von c("1", "2", "3")
+mean(c("1", "2", "3"))
+```
+]
+
+
+---
+
+# Funktionen 
+
+.pull-left4[
+1. Alles geschieht durch eine Funktion
+2. Funktionen haben (Default) Argumente
+3. Die Klasse der Argumente ist wichtig
+4. <high>Funktionen "leben" in Paketen</high>
+5. Erhalte Hilfe mit <mono>?</mono>
+]
+
+.pull-right5[
+<p align="center"><img src="image/pakete.png" height="400"></p>
+]
+
+---
+
+# Funktionen 
+
+.pull-left4[
+1. Alles geschieht durch eine Funktion
+2. Funktionen haben (Default) Argumente
+3. Die Klasse der Argumente ist wichtig
+4. <high>Funktionen "leben" in Paketen</high>
+5. Erhalte Hilfe mit <mono>?</mono>
+]
+
+.pull-right5[
+
+<high>Installiere Pakete</high> mit `install.packages()`
+
+```{r, eval = FALSE}
+# Installiere Paket: Nur einmal nötig!
+install.packages("tidyverse")
+```
+
+<high>Lade existierende Pakete</high> mit `library()`
+
+```{r, eval = FALSE}
+# Lade Paket: In jedem Skript
+library(tidyverse)
+```
+
+<p align="center"><img src="image/tidyverse.png" height="200"></p>
+]
+---
+
+# Funktionen 
+
+.pull-left4[
+1. Alles geschieht durch eine Funktion
+2. Funktionen haben (Default) Argumente
+3. Die Klasse der Argumente ist wichtig
+4. Funktionen "leben" in Paketen
+5. <high>Erhalte Hilfe mit <mono>?</mono></high>
+]
+
+.pull-right5[
+```{r}
+?cor
+```
+<p align="center"><img src="https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/help_cor.png" width="500"></p>
+]
+
+---
+
+class: middle, center
+
+<h1><a href="https://therbootcamp.github.io/I2R_2019Nov/_sessions/Funktionen/Funktionen_Interactive.R">Interactive</a></h1>
+
