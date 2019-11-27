@@ -3,7 +3,7 @@
   <head>
     <title>Funktionen</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Einführung in R   Basel R Bootcamp" />
+    <meta name="author" content="Einführung in die moderne Datenanalyse mit R   Basel R Bootcamp" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link rel="stylesheet" href="baselrbootcamp.css" type="text/css" />
   </head>
@@ -12,7 +12,7 @@
 class: center, middle, inverse, title-slide
 
 # Funktionen
-### Einführung in R<br> <a href='https://therbootcamp.github.io'> Basel R Bootcamp </a> <br> <a href='https://therbootcamp.github.io/I2R_2019Nov/'> <i class='fas fa-clock' style='font-size:.9em;'></i> </a>  <a href='https://therbootcamp.github.io'> <i class='fas fa-home' style='font-size:.9em;' ></i> </a>  <a href='mailto:therbootcamp@gmail.com'> <i class='fas fa-envelope' style='font-size: .9em;'></i> </a>  <a href='https://www.linkedin.com/company/basel-r-bootcamp/'> <i class='fab fa-linkedin' style='font-size: .9em;'></i> </a>
+### Einführung in die moderne Datenanalyse mit R<br> <a href='https://therbootcamp.github.io'> Basel R Bootcamp </a> <br> <a href='https://therbootcamp.github.io/I2R_2019Nov/'> <i class='fas fa-clock' style='font-size:.9em;'></i> </a>  <a href='https://therbootcamp.github.io'> <i class='fas fa-home' style='font-size:.9em;' ></i> </a>  <a href='mailto:therbootcamp@gmail.com'> <i class='fas fa-envelope' style='font-size: .9em;'></i> </a>  <a href='https://www.linkedin.com/company/basel-r-bootcamp/'> <i class='fab fa-linkedin' style='font-size: .9em;'></i> </a>
 ### November 2019
 
 ---
@@ -34,7 +34,7 @@ layout: true
     &lt;/a&gt;
     &lt;a href="https://therbootcamp.github.io/"&gt;
       &lt;font color="#7E7E7E"&gt;
-       Einführung in R | November 2019
+      Einführung in die moderne Datenanalyse mit R | November 2019
       &lt;/font&gt;
     &lt;/a&gt;
     &lt;/span&gt;
@@ -128,7 +128,7 @@ mean()
 ```
 
 ```
-## Error in mean.default(): Argument "x" fehlt (ohne Standardwert)
+## Error in mean.default(): argument "x" is missing, with no default
 ```
 
 ```r
@@ -183,7 +183,7 @@ mean(c(1, 2, 3))
 ```
 
 ```r
-# Berechne Mittelwert von c("1", "2", "3")
+# Berechne Mittelwert von c('1', '2', '3')
 mean(c("1", "2", "3"))
 ```
 
@@ -227,23 +227,21 @@ mean(c("1", "2", "3"))
 
 .pull-right5[
 
-&lt;high&gt;Installiere Pakete&lt;/high&gt; mit `install.packages()`
+&lt;high&gt;Installiere&lt;/high&gt; Pakete &lt;high&gt;einmal&lt;/high&gt; mit `install.packages()`
 
 
 ```r
-# Installiere Paket: Nur einmal nötig!
 install.packages("tidyverse")
 ```
-
-&lt;high&gt;Lade existierende Pakete&lt;/high&gt; mit `library()`
+&lt;br2&gt;
+&lt;high&gt;Lade&lt;/high&gt; existierende Pakete &lt;high&gt;jedes mal&lt;/high&gt; mit `library()`
 
 
 ```r
-# Lade Paket: In jedem Skript
 library(tidyverse)
 ```
 
-&lt;p align="center"&gt;&lt;img src="image/tidyverse.png" height="200"&gt;&lt;/p&gt;
+&lt;p align="left"&gt;&lt;img src="image/tidyverse.png" height="180"&gt;&lt;/p&gt;
 ]
 ---
 
@@ -317,24 +315,7 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
     deleted = true;
   });
-})();
-// adds .remark-code-has-line-highlighted class to <pre> parent elements
-// of code chunks containing highlighted lines with class .remark-code-line-highlighted
-(function(d) {
-  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
-  const preParents = [];
-  const findPreParent = function(line, p = 0) {
-    if (p > 1) return null; // traverse up no further than grandparent
-    const el = line.parentElement;
-    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
-  };
-
-  for (let line of hlines) {
-    let pre = findPreParent(line);
-    if (pre && !preParents.includes(pre)) preParents.push(pre);
-  }
-  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
-})(document);</script>
+})();</script>
 
 <script>
 (function() {

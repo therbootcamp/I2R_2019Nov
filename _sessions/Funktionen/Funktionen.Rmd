@@ -1,6 +1,6 @@
 ---
 title: "Funktionen"
-author: "Einführung in R<br>
+author: "Einführung in die moderne Datenanalyse mit R<br>
   <a href='https://therbootcamp.github.io'>
     Basel R Bootcamp
   </a>
@@ -45,7 +45,7 @@ layout: true
     </a>
     <a href="https://therbootcamp.github.io/">
       <font color="#7E7E7E">
-       Einführung in R | November 2019
+      Einführung in die moderne Datenanalyse mit R | November 2019
       </font>
     </a>
     </span>
@@ -200,21 +200,19 @@ mean(c("1", "2", "3"))
 
 .pull-right5[
 
-<high>Installiere Pakete</high> mit `install.packages()`
+<high>Installiere</high> Pakete <high>einmal</high> mit `install.packages()`
 
 ```{r, eval = FALSE}
-# Installiere Paket: Nur einmal nötig!
 install.packages("tidyverse")
 ```
-
-<high>Lade existierende Pakete</high> mit `library()`
+<br2>
+<high>Lade</high> existierende Pakete <high>jedes mal</high> mit `library()`
 
 ```{r, eval = FALSE}
-# Lade Paket: In jedem Skript
 library(tidyverse)
 ```
 
-<p align="center"><img src="image/tidyverse.png" height="200"></p>
+<p align="left"><img src="image/tidyverse.png" height="180"></p>
 ]
 ---
 
