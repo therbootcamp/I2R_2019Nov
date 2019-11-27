@@ -1,11 +1,11 @@
 ---
-title: "Look ahead"
-author: "Machine Learning with R<br>
+title: "Nächste Schritte"
+author: "Einführung in die moderne Datenanalyse mit R<br>
   <a href='https://therbootcamp.github.io'>
     Basel R Bootcamp
   </a>
   <br>
-  <a href='https://therbootcamp.github.io/ML_2019Oct/'>
+  <a href='https://therbootcamp.github.io/I2R_2019Nov/'>
     <i class='fas fa-clock' style='font-size:.9em;'></i>
   </a>&#8239; 
   <a href='https://therbootcamp.github.io'>
@@ -17,7 +17,7 @@ author: "Machine Learning with R<br>
   <a href='https://www.linkedin.com/company/basel-r-bootcamp/'>
     <i class='fab fa-linkedin' style='font-size: .9em;'></i>
   </a>"
-date: "October 2019"
+date: "November 2019"
 output:
   xaringan::moon_reader:
     css: ["default", "baselrbootcamp.css"]
@@ -45,7 +45,7 @@ layout: true
     </a>
     <a href="https://therbootcamp.github.io/">
       <font color="#7E7E7E">
-       Machine Learning with R | October 2019
+      Einführung in die moderne Datenanalyse mit R | November 2019
       </font>
     </a>
     </span>
@@ -66,10 +66,12 @@ options(digits = 4)
 
 
 .pull-left45[
-<br><br><br><br><br>
-#  Hello Machine Learning Experts!
 
-In 2 days, 6 sessions, and 16 hours you have come a long way.
+<br><br><br><br><br>
+
+# Hallo Base R Experten
+
+Nach einem Nachmittag kennt ihr nun die Grundlagen von R!
 
 ]
 
@@ -80,158 +82,585 @@ In 2 days, 6 sessions, and 16 hours you have come a long way.
 
 ---
 
-#  Welcome to the Data Revolution
+# R kann viel mehr
 
-.pull-left4[
+.pull-left5[
 
-<i>"Machine learning will be the engine of global growth."</i><br>
+<font size = 6>
 
-Financial times, July 2018
+1. `tidyverse` Kern<br>
+2. `tidyverse` Umfeld<br>
+3. Statistik<br>
+4. Machinelles lernen<br>
+5. Reporting<br>
 
-<i>"Fuel of the future - Data is giving rise to a new economy."</i><br>
+</font>
 
-The Economist, May 2017
-
-<i>"Wie Big Data die Finanzmärkte verändern könnte"</i><br>
-
-NZZ, August 2018
 
 ]
 
-.pull-right55[
-<p align="center">
-<img src="image/bigdatagrowth.png" height = 400px>
-</p>
+
+
+.pull-right5[
+<p align="center"><img border="0" alt="W3Schools" src="https://www.oreilly.com/library/view/the-art-of/9781593273842/httpatomoreillycomsourcenostarchimages915868.png.jpg" width="400px"></p>
 ]
+
 
 ---
 
-# Changes to the economy
+# `tidyverse` Kern
 
-.pull-left4[
-### Businesses employ AI/ML
-<p align="left">
-  <img src="image/bytemarks.png" height=380>
-</p>
-]
+Das [`tidyverse`](https://www.tidyverse.org/) ist im Kern eine Sammlung hoch-performanter, nutzerfreundlicher Pakete, die speziell für eine effizientere Datenanalyse entwickelt wurden. 
+1. `ggplot2` für Graphiken.
+2. `dplyr` für Datenverarbeitung.
+3. `tidyr` für Datenaufverarbeitung.
+4. `readr` für Daten I/O.
+5. `purrr` für funktionales Programmieren.
+6. `tibble` für moderne `data.frame`s.
+<br><br>
 
-.pull-right55[
-### Jobs become obsolete
-<p align="left">
-  <img src="image/obsolete.png" height=380>
-</p>
-]
-
-<!---<iframe width="1200" height="560" src="https://www.bloomberg.com/graphics/2017-job-risk/#dvz-asset-d3js-scatterplot-container" frameborder="0">
---->
+```{r, out.height = "200px", echo = F}
+knitr::include_graphics("http://d33wubrfki0l68.cloudfront.net/0ab849ed51b0b866ef6895c253d3899f4926d397/dbf0f/images/hex-ggplot2.png")
+knitr::include_graphics("http://d33wubrfki0l68.cloudfront.net/071952491ec4a6a532a3f70ecfa2507af4d341f9/c167c/images/hex-dplyr.png")
+knitr::include_graphics("http://d33wubrfki0l68.cloudfront.net/5f8c22ec53a1ac61684f3e8d59c623d09227d6b9/b15de/images/hex-tidyr.png")
+knitr::include_graphics("http://d33wubrfki0l68.cloudfront.net/66d3133b4a19949d0b9ddb95fc48da074b69fb07/7dfb6/images/hex-readr.png")
+knitr::include_graphics("http://d33wubrfki0l68.cloudfront.net/9221ddead578362bd17bafae5b85935334984429/37a68/images/hex-purrr.png")
+knitr::include_graphics("http://d33wubrfki0l68.cloudfront.net/f55c43407ae8944b985e2547fe868e5e2b3f9621/720bb/images/hex-tibble.png")
+```
 
 ---
 
-#  Repeating the past
-
-.pull-left35[
-### A nerdy cartoon
-<p align="center">
-
-</p>
-
-<p align = "center">
-  <img src="image/garbage_in_garbage_out.png" height = 375px><br>
-  <font style="font-size:10px">from <a href="https://www.smbc-comics.com/comic/rise-of-the-machines">smbc-comics.com</a></font>
-</p>
-
-
-
-]
-
-.pull-right6[
-### The real world: Predictive policing
-<a href="https://www.economist.com/briefing/2013/07/20/dont-even-think-about-it">The Economist</a><br>
-<a href="http://harvardcrcl.org/minority-report-why-we-should-question-predictive-policing/">Harvard Civil Rights Review</a>
-<p align = "center">
-  <img src="image/predpol.jpg" height = 268px><br>
-  <font style="font-size:10px">from <a href="https://www.smithsonianmag.com/innovation/artificial-intelligence-is-now-used-predict-crime-is-it-biased-180968337/">smithsonianmag.com</a></font>
-</p>
-
-
-
-
-]
-
-
-<!---
-
-#  Repeating the past
+# `ggplot2`
 
 .pull-left45[
-### Recidivity risk scores
-<p align="center">
-  <img src="image/risk_score.png" height=347px><br>
-  <font style="font-size:10px">from <a href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing">propublica.org</a></font>
-</p>
-</p>
+
+```{r eval = F, message=F}
+library(tidyverse) ; library(ggrepel)
+
+# Lade Tourismus Daten
+tour <- read_csv('1_Data/Tourismus.csv') 
+
+# create plot using ggplot2
+ggplot(data = tour,
+       mapping = aes(x = Besucher, 
+                     y = Dauer,
+                     label = Land)) +
+  scale_x_continuous(trans = 'log2') + 
+  geom_point(size=2) 
+
+```
 
 ]
 
 .pull-right45[
-### Empirical evaluation
-<a href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing">Pro Publica I</a>, 
-<a href="https://www.propublica.org/article/how-we-analyzed-the-compas-recidivism-algorithm">Pro Publica II</a>
 
-<p align = "center">
-  <img src="image/risk_score_eval.png" height=300px><br>
-  <font style="font-size:10px">from <a href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing">propublica.org</a></font>
-</p>
+```{r, echo = F, message=FALSE,dpi=300,fig.height=5,fig.width=5.5}
+library(tidyverse) ; library(ggrepel)
 
-]
+# Lade Tourismus Daten
+tour <- read_csv('1_Data/Tourismus.csv') 
 
---->
-
----
-
-# The end of privacy
-
-.pull-left3[
-
-<i>"Most technologies have their bright and dark side [...] My personal opinion is that a machine's ability to better understand us would lead to improved consumer experience, products, etc… But imagine that we published a clone of youarewhatyoulike.com that simply predicted which of your friends was gay (or Christian or liberal or HIV-positive, etc); lynches are not unlikely to follow…"</i>
-
-Michal Kosinski, Stanford University <a href="https://www.theguardian.com/world/2014/aug/03/internet-death-privacy-google-facebook-alex-preston" style="font-size:8px">[Full text]</a>
-
-]
-
-.pull-right65[
-
-<p align = "center">
-  <img src="image/endofprivacy.jpg" height=410px><br>
-  <font style="font-size:10px">from <a href="https://www.pnas.org/content/112/4/1036">pnas.org</a></font>
-</p>
+# Plotte Dauer gegen Besucher
+ggplot(data = tour,
+       mapping = aes(x = Besucher, 
+                     y = Dauer,
+                     label = Land)) +
+  scale_x_continuous(trans = 'log2') + 
+  geom_point(size=2) 
+```
 
 ]
 
 
+---
+
+# `ggplot2`
+
+.pull-left45[
+
+```{r eval = F, message=F}
+library(tidyverse) ; library(ggrepel)
+
+# Lade Tourismus Daten
+tour <- read_csv('1_Data/Tourismus_18.csv') 
+
+# Plotte Dauer gegen Besucher
+ggplot(data = tour,
+       mapping = aes(x = Besucher, 
+                     y = Dauer,
+                     label = Land)) +
+  scale_x_continuous(trans = 'log2') + 
+  geom_point(size=2) + 
+  geom_label_repel(size = 2,
+                   label.padding = 0.1) +
+  theme_bw() 
+
+```
+
+]
+
+.pull-right45[
+
+```{r, echo = F, message=FALSE,dpi=300,fig.height=5,fig.width=5.5}
+library(tidyverse) ; library(ggrepel)
+
+# Lade Tourismus Daten
+tour <- read_csv('1_Data/Tourismus.csv') 
+
+# Plotte Dauer gegen Besucher
+ggplot(data = tour,
+       mapping = aes(x = Besucher, 
+                     y = Dauer,
+                     label = Land)) +
+  scale_x_continuous(trans = 'log2') + 
+  geom_point(size=2) + 
+  geom_label_repel(size = 3,
+                   label.padding = 0.1) +
+  theme_bw() 
+```
+
+]
+
 
 
 ---
 
-<div class="center_text_2">
-  <span>
-  What do you think?
-  </span>
-</div> 
+# `ggplot2`
+
+.pull-left45[
+
+```{r eval = F, message=F}
+library(tidyverse) ; library(ggrepel)
+
+# Lade Tourismus Daten
+tour <- read_csv('1_Data/Tourismus.csv') 
+
+# Plotte Dauer gegen Besucher
+ggplot(data = tour,
+       mapping = aes(x = Besucher, 
+                     y = Dauer,
+                     label = Land)) +
+  scale_x_continuous(trans = 'log2') + 
+  geom_point(size=2) + 
+  geom_label_repel(size = 2,
+                   label.padding = 0.1) +
+  theme_bw() +
+  facet_grid(Region ~ .)
+
+
+```
+
+]
+
+.pull-right45[
+
+```{r, echo = F, message=FALSE,dpi=300,fig.height=5,fig.width=5.5}
+library(tidyverse) ; library(ggrepel)
+
+# Lade Tourismus Daten
+tour <- read_csv('1_Data/Tourismus.csv') 
+
+# Plotte Dauer gegen Besucher
+ggplot(data = tour,
+       mapping = aes(x = Besucher, 
+                     y = Dauer,
+                     label = Land)) +
+  scale_x_continuous(trans = 'log2') + 
+  geom_point(size=2) + 
+  geom_label_repel(size = 2,
+                   label.padding = 0.1) +
+  theme_bw() +
+  facet_grid(Region ~ .)
+```
+
+]
+
+---
+
+# `dplyr`
+
+.pull-left45[
+
+```{r eval = F, message=F}
+library(tidyverse) 
+
+# Lade Tourismus Daten
+tour <- read_csv('1_Data/Tourismus.csv') 
+
+# Zeige Top 10 Länder
+tour %>%
+  mutate(Nächte = Besucher * Dauer) %>%
+  arrange(desc(Nächte)) %>%
+  select(Land,  Nächte) %>%
+  top_n(10)
+
+
+```
+
+]
+
+.pull-right45[
+
+```{r, echo = F, message=FALSE,dpi=300,fig.height=5,fig.width=5.5}
+# Lade Tourismus Daten
+tour <- read_csv('1_Data/Tourismus.csv') 
+tour$Region[tour$Region == 'Australien, Neuseeland, Ozeanien'] = 'Australien'
+
+# Zeige Top 10 Länder
+tour %>%
+  mutate(Nächte = Besucher * Dauer) %>%
+  arrange(desc(Nächte)) %>%
+  select(Land,  Nächte) %>%
+  top_n(10)
+
+```
+
+]
+
+---
+
+# `dplyr`
+
+.pull-left45[
+
+```{r eval = F, message=F}
+library(tidyverse) 
+
+# Lade Tourismus Daten
+tour <- read_csv('1_Data/Tourismus.csv') 
+
+# Berechne Nächte per Region
+tour %>%
+  mutate(Nächte = Besucher * Dauer) %>%
+  group_by(Region) %>%
+  summarize(
+    Nächte_mittel = mean(Nächte),
+    Nächte_summe = sum(Nächte),    
+  )
+
+```
+
+]
+
+.pull-right45[
+
+```{r, echo = F, message=FALSE,dpi=300,fig.height=5,fig.width=5.5}
+# Lade Tourismus Daten
+tour <- read_csv('1_Data/Tourismus.csv') 
+tour$Region[tour$Region == 'Australien, Neuseeland, Ozeanien'] = 'Australien'
+
+# Berechne Nächte per Region
+tour %>%
+  mutate(Nächte = Besucher * Dauer) %>%
+  group_by(Region) %>%
+  summarize(
+    Nächte_mittel = mean(Nächte),
+    Nächte_summe = sum(Nächte),    
+  )
+
+```
+
+]
+
+---
+
+# `dplyr`
+
+.pull-left45[
+
+```{r eval = F, message=F}
+library(tidyverse) ; library(ggrepel)
+
+# Lade Tourismus Daten
+tour <- read_csv('1_Data/Tourismus.csv') 
+europa <- read_csv('1_Data/Europa.csv') 
+
+# Verbinde Nächte mit Äquivalenzeinkommen
+tour %>%
+  mutate(Nächte = Besucher * Dauer) %>%
+  left_join(europa) %>%
+  ggplot(aes(x = Äquivalenzeinkommen, 
+             y = Nächte,
+             label = Land)) +
+  scale_y_continuous(trans = 'log2') + 
+  geom_point() +
+  geom_label_repel(size = 2) +
+  theme_bw() 
+
+```
+
+]
+
+.pull-right45[
+
+```{r, echo = F, message=FALSE, warning = F, dpi=300,fig.height=5,fig.width=5.5}
+library(tidyverse) ; library(ggrepel)
+
+# Lade Tourismus Daten
+tour <- read_csv('1_Data/Tourismus.csv') 
+europa <- read_csv('1_Data/Europa.csv') 
+
+# Berechne Nächte per Region
+tour %>%
+  mutate(Nächte = Besucher * Dauer) %>%
+  left_join(europa) %>%
+  ggplot(aes(x = Äquivalenzeinkommen, 
+             y = Nächte,
+             label = Land)) +
+  scale_y_continuous(trans = 'log2') + 
+  geom_point() +
+  geom_label_repel(size = 2) +
+  theme_bw() 
+
+```
+
+]
 
 
 ---
 
-# Next steps
+# `tidyverse` erweitert
+
+Das Umfeld des [`tidyverse`](https://www.tidyverse.org/) beinhaltet eine Sammlung weiterer hoch-performanter, nutzerfreundlicher Pakete, die den tidyverse Kern ergänzen. 
+1. `xlm2` für die Verarbeitung von XML und HTML Dateien.
+2. `rvest` für Web Scraping.
+3. `haven` für SPSS, SAS, und Stata Dateien.
+4. `readxl` für Excel Dateien.
+5. `lubridate` für Zeitvariablen.
+6. `tidytext` für Textverarbeitung.
+<br><br>
+
+```{r, out.height = "200px", echo = F}
+knitr::include_graphics("https://github.com/rstudio/hex-stickers/raw/master/PNG/rvest.png")
+knitr::include_graphics("https://github.com/rstudio/hex-stickers/raw/master/PNG/haven.png")
+knitr::include_graphics("https://github.com/rstudio/hex-stickers/raw/master/PNG/readxl.png")
+knitr::include_graphics("https://github.com/rstudio/hex-stickers/raw/master/PNG/lubridate.png")
+knitr::include_graphics("https://pbs.twimg.com/media/DeacLnGU0AAlmS9.png")
+```
+
+
+---
+
+# Web Scraping
+
+```{r, echo = F, message=F}
+options(tibble.print_max = 6, tibble.width=90)
+library(xml2) ; library(rvest) ; library(tibble)
+```
+
+```{r, message=F}
+# Tabelle laden von Wikipedia (Pakete nicht vergessen)
+read_html("https://en.wikipedia.org/wiki/R_(programming_language)") %>%
+  html_node(xpath = '//*[@id="mw-content-text"]/div/table[2]') %>%
+  html_table() %>% as_tibble()
+```
+
+
+---
+
+# Textanalyse
+
+.pull-left5[
+
+```{r, message=F, eval=F}
+library(tidytext) ; library(wordcloud)
+library(dplyr) ; library(stringr)
+
+# Wörter zählen
+counts <- 
+  read_html(".../R_(programming_language)") %>%
+  html_text() %>%
+  tibble() %>%
+  unnest_tokens(w, ".") %>%
+  filter(!str_detect(w, '[:digit:]')) %>%
+  anti_join(stop_words) %>%
+  count(word, sort = TRUE) %>%
+  top_n(100) 
+
+# Wordwolke
+wordcloud(counts$word, 
+          counts$n)
+  
+```
+
+]
+
+.pull-right4[
+
+```{r, message=F, warning=F, echo=F, fig.width=5,fig.height=5,dpi=300}
+library(dplyr) ; library(tidytext) ; library(wordcloud) ; library(stringr)
+
+# Wörter zählen
+counts <- 
+  read_html("https://en.wikipedia.org/wiki/R_(programming_language)") %>%
+  html_text() %>%
+  tibble() %>%
+  unnest_tokens(word, ".") %>%
+  filter(!str_detect(word, '[:digit:]')) %>%
+  anti_join(stop_words %>% bind_rows(tibble(word = 'retrieved', lexicon = ''))) %>%
+  count(word, sort = TRUE) %>%
+  top_n(100) 
+
+# Wordwolke
+par(mar=c(0,0,0,0))
+wordcloud(counts$word, 
+          counts$n)
+  
+```
+
+]
+
+---
+
+# Statistik
+
+
+.pull-left45[
+
+```{r, message=F}
+library(tidyverse)
+
+# Lade Tourismus Daten
+tour <- read_csv('1_Data/Tourismus.csv')
+länd <- read_csv('1_Data/Länder.csv')                 
+
+# verbinde Daten
+data <- tour %>% 
+  inner_join(länd) %>%
+  mutate(Nächte = Besucher * Dauer)
+
+# Regressionsanalyse
+model = lm(Nächte ~ Bevölkerung + 
+                    Dichte + BIP,
+           data = data)
+```
+
+]
+
+.pull-right45[
+
+
+```{r, message=F, warning=F}
+# R-squared
+summary(model)$r.squared
+```
+
+
+```{r, message=F, warning=F, echo=T, eval=F}
+# R-squared
+summary(model)$r.squared
+```
+
+```{r, message=F, warning=F, echo=F, eval=T}
+# R-squared
+summary(model)$coef[,-2]
+```
+]
+
+---
+
+.pull-left45[
+
+# Maschinelles lernen
+
+```{r, message=F, eval=F}
+library(tidyverse) ; library(rpart)
+
+# Lade Tourismus Daten
+tour <- read_csv('1_Data/Tourismus.csv')
+länd <- read_csv('1_Data/Länder.csv')                 
+
+# verbinde Daten
+data <- tour %>% 
+  inner_join(länd) %>%
+  mutate(Nächte = Besucher * Dauer)
+
+# Regressionsanalyse
+rpart(
+  formula = Besucher ~ Bevölkerung + 
+                       Dichte + BIP,
+  data = data) 
+  
+```
+
+]
+
+.pull-right45[
+
+<br><br>
+
+```{r, message=F, warning=F, echo=F, fig.width=5,fig.height=5,dpi=300}
+library(tidyverse) ; library(rpart)
+library(rattle)
+
+# Lade Tourismus Daten
+tour <- read_csv('1_Data/Tourismus.csv')
+länd <- read_csv('1_Data/Länder.csv')                 
+
+# verbinde Daten
+data <- tour %>% 
+  inner_join(länd) %>%
+  mutate(Nächte = Besucher * Dauer)
+
+# Regressionsanalyse
+rpart(
+  formula = Besucher ~ Bevölkerung + 
+                       Dichte + BIP,
+  data = data,
+  control = rpart.control(cp = 0)) %>%
+  fancyRpartPlot(caption = '')
+```
+
+]
+---
+
+# Reporting Werkzeuge
+
+R und RStudio bieten auch exzellente Werkzeuge zum erstellen von <high>Berichten</high>, <high>Slides</high>, und sogar <high>Webseiten</high>. 
+1. `markdown` für dynamische PDF Dokumente.
+2. `xaringan` für Slides.
+3. `shiny` für Webseiten und Cockpits.
+
+<br><br>
+
+```{r, out.height = "200px", echo = F}
+knitr::include_graphics("https://github.com/rstudio/hex-stickers/raw/master/PNG/rmarkdown.png")
+knitr::include_graphics("https://github.com/rstudio/hex-stickers/raw/master/PNG/xaringan.png")
+knitr::include_graphics("https://github.com/rstudio/hex-stickers/raw/master/PNG/shiny.png")
+```
+
+
+
+---
+
+.pull-left45[
+
+# `markdown`
+
+<p align="left"><img style="height:440px" src="image/markdown.png"></p>
+]
+
+.pull-right5[
+<br><br>
+<p align="center"><img style="height:510px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="image/markdown2.png"></p>
+]
+
+---
+
+<iframe width="1000" height="600" src="https://shiny.rstudio.com/gallery/movie-explorer.html" frameborder="0" allowfullscreen></iframe>
+
+---
+
+# Nächste Schritte
 
 .pull-left5[
 <font size = 4><i>
 <font size = 6>
-1. Practice<br>
-2. Read books<br>
-3. Consult websites<br>
-4. Support & consulting<br>
-5. Upcoming courses<br>
+1. Anwenden<br>
+2. Bücher<br>
+3. Webseiten<br>
+4. Hilfe & Consulting<br>
+5. Weiterführende Kurse<br>
 ]
 
 </font>
@@ -243,31 +672,32 @@ Michal Kosinski, Stanford University <a href="https://www.theguardian.com/world/
 
 ---
 
-# Books
+# Bücher  
 
-Here is a very incomplete series of good books. They are ordered by complexity, beginning with user-friendly books on <high>learning statistics</high> in R and ending with books focusing on the more <high>advanced topics of the R language</high>.
+Hier ist eine unvollständige Liste guter Bücher über R lose geordnet nach vorausgesetzter Erfahrung.<br><br>
 
-
-<table width="100%" style="cellspacing:0; cellpadding:0; border:none;">
+<table width="80%" style="cellspacing:0; cellpadding:0; border:none;">
 
   <tr>    
 
-
-    <td>
-  <a href="http://appliedpredictivemodeling.com/"><img border="0" alt="W3Schools" src="http://static1.squarespace.com/static/51156277e4b0b8b2ffe11c00/t/51157487e4b0b8b2ffe16829/1509217882069/?format=1500w" height="180" ></a>
-  </td>
-  
-      <td>
-  <a href="http://www-bcf.usc.edu/~gareth/ISL/ISLR%20First%20Printing.pdf"><img border="0" alt="W3Schools" src="https://images-na.ssl-images-amazon.com/images/I/41EaH4W9LVL._SX332_BO1,204,203,200_.jpg" height="180" ></a>
-  </td>
-  
-        <td>
-  <a href="https://www.manning.com/books/deep-learning-with-r"><img border="0" alt="W3Schools" src="https://images-na.ssl-images-amazon.com/images/I/51h5d4dYaoL._SX396_BO1,204,203,200_.jpg" height="180" ></a>
+  <td> 
+  <a href="http://r4ds.had.co.nz/"><img border="0" alt="W3Schools" src="http://r4ds.had.co.nz/cover.png" height="180"></a>
   </td>
 
+  <td>
+  <a href="https://covers.oreillystatic.com/images/0636920028574/cat.gif"><img border="0" alt="W3Schools" src="https://covers.oreillystatic.com/images/0636920028574/cat.gif" height="180"></a>
+  </td>
+
+  <td> 
+  <a href="http://r4ds.had.co.nz/"><img border="0" alt="W3Schools" src="http://r4ds.had.co.nz/cover.png" height="180"></a>
+  </td>
+
+  <td>
+  <a href="https://www.springer.com/de/book/9783540799979"><img border="0" alt="W3Schools" src="https://images.springer.com/sgw/books/medium/9783540799979.jpg" height="180" ></a>
+  </td>
   
   <td>
-  <a href="https://www.tidytextmining.com/"><img border="0" alt="W3Schools" src="https://www.tidytextmining.com/images/cover.png" height="180" ></a>
+  <a href="https://bookdown.org/ndphillips/YaRrr/"><img border="0" alt="W3Schools" src="https://bookdown.org/ndphillips/YaRrr/images/YaRrr_Cover.jpg" height="180" ></a>
   </td>
   
   <td>
@@ -279,15 +709,20 @@ Here is a very incomplete series of good books. They are ordered by complexity, 
 
   <tr style="background-color:#ffffff">
 
-    <td> 
-  <a href="http://r4ds.had.co.nz/"><img border="0" alt="W3Schools" src="http://r4ds.had.co.nz/cover.png" height="180"></a>
+  <td>
+  <a href="http://appliedpredictivemodeling.com/"><img border="0" alt="W3Schools" src="http://static1.squarespace.com/static/51156277e4b0b8b2ffe11c00/t/51157487e4b0b8b2ffe16829/1509217882069/?format=1500w" height="180" ></a>
   </td>
+  
+  <td>
+  <a href="http://www-bcf.usc.edu/~gareth/ISL/ISLR%20First%20Printing.pdf"><img border="0" alt="W3Schools" src="https://images-na.ssl-images-amazon.com/images/I/41EaH4W9LVL._SX332_BO1,204,203,200_.jpg" height="180" ></a>
+  </td>
+  
+  <td>
+  <a href="https://www.manning.com/books/deep-learning-with-r"><img border="0" alt="W3Schools" src="https://images-na.ssl-images-amazon.com/images/I/51h5d4dYaoL._SX396_BO1,204,203,200_.jpg" height="180" ></a>
+  </td>
+
 
   <td>
-  <a href="https://covers.oreillystatic.com/images/0636920028574/cat.gif"><img border="0" alt="W3Schools" src="https://covers.oreillystatic.com/images/0636920028574/cat.gif" height="180"></a>
-  </td>
-
-        <td>
   <a href="https://csgillespie.github.io/efficientR/"><img border="0" alt="W3Schools" src="https://csgillespie.github.io/efficientR/figures/f0_web.png" height="180" ></a>
   </td>
 
@@ -313,38 +748,39 @@ Here is a very incomplete series of good books. They are ordered by complexity, 
 
 .pull-left4[
 
-# Websites
+# Webseiten
 
-The web is a great place to learn about R. 
+Das Netz ist vll. der beste Ort für Informationen über R.
 
-<font size = 4><i>Best begin your journey with:</i></font>
+<font size = 4><i>Beginnt eure Suche mit:</i></font>
 
-[Google](www.google.com) or [Rseek](www.rseek.org), which is a wrapper around google to maximize hits related to R. However, most of the time Google works just fine. Just be sure to add *r* to the the search query. 
+[Google](www.google.com). Stellt sicher, dass ihr *R* oder *Rproject* mit in eurer Suche habt. 
 
-<font size = 4><i>Then you will be redirected to one of two pages</i></font>
+<br>
+<font size = 4><i>Meistens werdet ihr dann weitergeleitet zu:</i></font>
 
-[R-bloggers](www.r-bloggers.com) is a website on which R users inform each other on the newest developments. See, e.g., Nathaniel's [entry](https://www.r-bloggers.com/the-new-and-improved-pirateplot-now-with-themes/).
+[R-bloggers](www.r-bloggers.com) informiert euch über die neusten R Entwicklungen. Meldet euch für den Newsletter an.
 
-[Stackoverflow](www.r-bloggers.com) is a website on which R users exchange problems and solutions to problems. Try post something yourself. You will be amazed by the turnaround. 
-
+[Stackoverflow](https://stackoverflow.com/questions/tagged/r) ist eine Seite für R Probleeme und Lösungen. Versucht selbst mal ein Problem zu posten. Oft bekommt ihr erstaunlich schnell Antwort.
 
 ]
 
 .pull-right5[
 <p align="left" style="padding: 0 0px"><br><br><br><br><br><br><br><br><br>
-    <a href="https://www.google.com/"><img border="0" alt="W3Schools" src="https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/google.png" height="100"></a><img border="0" alt="W3Schools" src="https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/comma.png" height="50"><a href="http://rseek.org/"><img border="0" alt="W3Schools" src="https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/rseek.png" height="100" style="margin-left:10px; margin-buttom:10px"></a><br><br><br2>
+    <a href="https://www.google.com/"><img border="0" alt="W3Schools" src="https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/google.png" height="100"></a><br><br><br2>
     <a href="https://www.r-bloggers.com/"><img border="0" alt="W3Schools" src="https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/rbloggers.png" height="105" style="margin-bottom:10px"></a><br>
   <a href="https://stackoverflow.com/"><img border="0" alt="W3Schools" src="https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/stackoverflow.png" height="105"></a>
 </p>
 ]
 
-
-
 ---
 
-# Support & Consulting
+# Hilfe & Consulting
 
 <table class="tg"  style="cellspacing:0; cellpadding:0; border:none">
+  <col width="22%">
+  <col width="22%">
+  <col width="22%">
   <tr>
     <th class="tg-yw4l" valign='top'>
     <p align="center"><br>
@@ -389,37 +825,51 @@ The web is a great place to learn about R.
 ---
 
 
-# Upcoming courses
+# Weiterführende Kurse
 
 
 <table class="tg"  style="cellspacing:0; cellpadding:0; border:none;">
 <tr valign="top">
+  <col width="25%">
+  <col width="25%">
+  <col width="25%">
+  <col width="25%">
   <td>
     <p align="center">
       <a class="project-link" href="mailto:therbootcamp@gmail.com?subject=Preregistration for Statistics with R&body=I would like to preregister for the R Bootcamp on 'Data Mining mit R' on February 14/15 in Basel, Switzerland." align="center">
-      <font style="font-size:20px;weight:700"><br>Data Mining mit R</font><br>
+      <font style="font-size:20px;weight:700"><br>Explorative Datenanalyse mit R</font><br>
       <br>
-      <img src="https://therbootcamp.github.io/img/courses/1.png" height="250px" style="border-radius:50%;border:10px solid #E9ECEF"></img><br><br>
-      <high>2 days, February 14/15, 2020</high><br><br><br>
+      <img src="https://therbootcamp.github.io/img/courses/1.png" height="230px" style="border-radius:50%;border:10px solid #E9ECEF"></img><br><br>
+      <high>Februar 14/15, 2020</high><br><br><br>
     </p>
   </td>
   <td>
     <p align="center">
       <a class="project-link" href="mailto:therbootcamp@gmail.com?subject=Preregistration for Statistics with R&body=I would like to preregister for the R Bootcamp on 'Statistik mit R' on March 13/14 in Basel, Switzerland." align="center">
-      <font style="font-size:20px;weight:700"><br>Statistik mit R</font><br>
+      <font style="font-size:20px;weight:700"><br>Statistik mit R<br></font><br>
       <br>
-      <img src="https://therbootcamp.github.io/img/courses/3.png" height="250px" style="border-radius:50%;border:10px solid #E9ECEF"></img><br><br>
-      <high>2 days, March 13/14, 2019</high><br><br><br>
+      <img src="https://therbootcamp.github.io/img/courses/2.png" height="230px" style="border-radius:50%;border:10px solid #E9ECEF"></img><br><br>
+      <high>March 20/21, 2019</high><br><br><br>
+      </a>
+    </p>
+  </td>
+  <td>
+    <p align="center">
+      <a class="project-link" href="mailto:therbootcamp@gmail.com?subject=Preregistration for Statistics with R&body=I would like to preregister for the R Bootcamp on 'Statistik mit R' on March 13/14 in Basel, Switzerland." align="center">
+      <font style="font-size:20px;weight:700"><br>Maschinelles Lernen mit R</font><br>
+      <br>
+      <img src="https://therbootcamp.github.io/img/courses/3.png" height="230px" style="border-radius:50%;border:10px solid #E9ECEF"></img><br><br>
+      <high>April 3/4, 2019</high><br><br><br>
       </a>
     </p>
   </td>
   <td>
     <p align="center">
       <a class="project-link" href="mailto:therbootcamp@gmail.com?subject=Preregistration for Statistics with R&body=I would like to preregister for the R Bootcamp on 'Reporting mit R' on March 13/14 in Basel, Switzerland." align="center">
-      <font style="font-size:20px;weight:700"><br>Statistik mit R</font><br>
+      <font style="font-size:20px;weight:700"><br>Reporting mit R<br></font><br>
       <br>
-      <img src="https://therbootcamp.github.io/img/courses/4.png" height="250px" style="border-radius:50%;border:10px solid #E9ECEF"></img><br><br>
-      <high>2 days, May 15/16, 2019</high><br><br><br>
+      <img src="https://therbootcamp.github.io/img/courses/4.png" height="230px" style="border-radius:50%;border:10px solid #E9ECEF"></img><br><br>
+      <high>Mai 15/16, 2019</high><br><br><br>
       </a>
     </p>
   </td>
@@ -450,5 +900,3 @@ class: center, middle
 
 # Thank you! and one more thing...
 
-<!-- <a href="http://i.imgur.com/PgtvQar.png"><font size=5>Here is an R Joke.</font></a><br><br> -->
-<!-- <font size=5>And now one more thing</font>... -->

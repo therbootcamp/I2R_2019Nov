@@ -70,40 +70,9 @@ baselers <- read_csv("https://raw.githubusercontent.com/therbootcamp/baselers/ma
 ```
 
 
-#  Die Welt verändert sich
+# Die Welt ändert sich
 
-.pull-left4[
-
-<i>"Fuel of the future - Data is giving rise to a new economy."</i><br>
-
-The Economist, May 2017
-
-<i>"Wie Big Data die Finanzmärkte verändern könnte"</i><br>
-
-NZZ, August 2018
-
-<i>"Machine learning will be the engine of global growth."</i><br>
-
-Financial times, July 2018
-
-]
-
-.pull-right55[
-  <p align="center">
-<img src="image/bigdatagrowth.png" height = 400px>
-</p>
-]
-
----
-
-# Changes to the economy
-
-.pull-right55[
-
-<p align="left">
-  <img src="image/obsolete.png" height=380>
-</p>
-]
+1-2 coole  quotes
 
 
 ---
