@@ -69,7 +69,7 @@ Nach einem Nachmittag kennt ihr nun die Grundlagen von R!
 &lt;font size = 6&gt;
 
 1. `tidyverse` Kern&lt;br&gt;
-2. `tidyverse` Umfeld&lt;br&gt;
+2. `tidyverse` erweitert&lt;br&gt;
 3. Statistik&lt;br&gt;
 4. Machinelles lernen&lt;br&gt;
 5. Reporting&lt;br&gt;
@@ -91,9 +91,9 @@ Nach einem Nachmittag kennt ihr nun die Grundlagen von R!
 # `tidyverse` Kern
 
 Das [`tidyverse`](https://www.tidyverse.org/) ist im Kern eine Sammlung hoch-performanter, nutzerfreundlicher Pakete, die speziell für eine effizientere Datenanalyse entwickelt wurden. 
-1. `ggplot2` für Graphiken.
+1. `ggplot2` für Grafiken.
 2. `dplyr` für Datenverarbeitung.
-3. `tidyr` für Datenaufverarbeitung.
+3. `tidyr` für Datenverarbeitung.
 4. `readr` für Daten I/O.
 5. `purrr` für funktionales Programmieren.
 6. `tibble` für moderne `data.frame`s.
@@ -114,7 +114,7 @@ library(tidyverse) ; library(ggrepel)
 # Lade Tourismus Daten
 tour &lt;- read_csv('1_Data/Tourismus.csv') 
 
-# create plot using ggplot2
+# Erstelle Plot mit ggplot2
 ggplot(data = tour,
        mapping = aes(x = Besucher, 
                      y = Dauer,
@@ -438,7 +438,7 @@ model = lm(Nächte ~ Bevölkerung +
 
 
 ```r
-# R-squared
+# Bestimmtheitsmass
 summary(model)$r.squared
 ```
 
@@ -449,8 +449,8 @@ summary(model)$r.squared
 
 
 ```r
-# R-squared
-summary(model)$r.squared
+# Koeffizienten
+summary(model)$coef[,-2]
 ```
 
 
@@ -503,7 +503,7 @@ rpart(
 # Reporting Werkzeuge
 
 R und RStudio bieten auch exzellente Werkzeuge zum erstellen von &lt;high&gt;Berichten&lt;/high&gt;, &lt;high&gt;Slides&lt;/high&gt;, und sogar &lt;high&gt;Webseiten&lt;/high&gt;. 
-1. `markdown` für dynamische PDF Dokumente.
+1. `rmarkdown` für dynamische PDF Dokumente.
 2. `xaringan` für Slides.
 3. `shiny` für Webseiten und Cockpits.
 
@@ -517,7 +517,7 @@ R und RStudio bieten auch exzellente Werkzeuge zum erstellen von &lt;high&gt;Ber
 
 .pull-left45[
 
-# `markdown`
+# `rmarkdown`
 
 &lt;p align="left"&gt;&lt;img style="height:440px" src="image/markdown.png"&gt;&lt;/p&gt;
 ]
@@ -643,7 +643,7 @@ Das Netz ist vll. der beste Ort für Informationen über R.
 
 [R-bloggers](www.r-bloggers.com) informiert euch über die neusten R Entwicklungen. Meldet euch für den Newsletter an.
 
-[Stackoverflow](https://stackoverflow.com/questions/tagged/r) ist eine Seite für R Probleeme und Lösungen. Versucht selbst mal ein Problem zu posten. Oft bekommt ihr erstaunlich schnell Antwort.
+[Stackoverflow](https://stackoverflow.com/questions/tagged/r) ist eine Seite für R Probleme und Lösungen. Versucht selbst mal ein Problem zu posten. Oft bekommt ihr erstaunlich schnell Antwort.
 
 ]
 
@@ -727,7 +727,7 @@ Das Netz ist vll. der beste Ort für Informationen über R.
   &lt;/td&gt;
   &lt;td&gt;
     &lt;p align="center"&gt;
-      &lt;a class="project-link" href="mailto:therbootcamp@gmail.com?subject=Preregistration for Statistics with R&amp;body=I would like to preregister for the R Bootcamp on 'Statistik mit R' on March 13/14 in Basel, Switzerland." align="center"&gt;
+      &lt;a class="project-link" href="mailto:therbootcamp@gmail.com?subject=Preregistration for Statistics with R&amp;body=I would like to preregister for the R Bootcamp on 'Statistik mit R' on März 13/14 in Basel, Switzerland." align="center"&gt;
       &lt;font style="font-size:20px;weight:700"&gt;&lt;br&gt;Statistik mit R&lt;br&gt;&lt;/font&gt;&lt;br&gt;
       &lt;br&gt;
       &lt;img src="https://therbootcamp.github.io/img/courses/2.png" height="230px" style="border-radius:50%;border:10px solid #E9ECEF"&gt;&lt;/img&gt;&lt;br&gt;&lt;br&gt;
@@ -828,7 +828,24 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
     deleted = true;
   });
-})();</script>
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
 
 <script>
 (function() {

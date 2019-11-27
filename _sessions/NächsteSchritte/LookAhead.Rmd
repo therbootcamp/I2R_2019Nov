@@ -89,7 +89,7 @@ Nach einem Nachmittag kennt ihr nun die Grundlagen von R!
 <font size = 6>
 
 1. `tidyverse` Kern<br>
-2. `tidyverse` Umfeld<br>
+2. `tidyverse` erweitert<br>
 3. Statistik<br>
 4. Machinelles lernen<br>
 5. Reporting<br>
@@ -111,9 +111,9 @@ Nach einem Nachmittag kennt ihr nun die Grundlagen von R!
 # `tidyverse` Kern
 
 Das [`tidyverse`](https://www.tidyverse.org/) ist im Kern eine Sammlung hoch-performanter, nutzerfreundlicher Pakete, die speziell für eine effizientere Datenanalyse entwickelt wurden. 
-1. `ggplot2` für Graphiken.
+1. `ggplot2` für Grafiken.
 2. `dplyr` für Datenverarbeitung.
-3. `tidyr` für Datenaufverarbeitung.
+3. `tidyr` für Datenverarbeitung.
 4. `readr` für Daten I/O.
 5. `purrr` für funktionales Programmieren.
 6. `tibble` für moderne `data.frame`s.
@@ -140,7 +140,7 @@ library(tidyverse) ; library(ggrepel)
 # Lade Tourismus Daten
 tour <- read_csv('1_Data/Tourismus.csv') 
 
-# create plot using ggplot2
+# Erstelle Plot mit ggplot2
 ggplot(data = tour,
        mapping = aes(x = Besucher, 
                      y = Dauer,
@@ -541,18 +541,18 @@ model = lm(Nächte ~ Bevölkerung +
 
 
 ```{r, message=F, warning=F}
-# R-squared
+# Bestimmtheitsmass
 summary(model)$r.squared
 ```
 
 
 ```{r, message=F, warning=F, echo=T, eval=F}
-# R-squared
-summary(model)$r.squared
+# Koeffizienten
+summary(model)$coef[,-2]
 ```
 
 ```{r, message=F, warning=F, echo=F, eval=T}
-# R-squared
+# Koeffizienten
 summary(model)$coef[,-2]
 ```
 ]
@@ -617,7 +617,7 @@ rpart(
 # Reporting Werkzeuge
 
 R und RStudio bieten auch exzellente Werkzeuge zum erstellen von <high>Berichten</high>, <high>Slides</high>, und sogar <high>Webseiten</high>. 
-1. `markdown` für dynamische PDF Dokumente.
+1. `rmarkdown` für dynamische PDF Dokumente.
 2. `xaringan` für Slides.
 3. `shiny` für Webseiten und Cockpits.
 
@@ -635,7 +635,7 @@ knitr::include_graphics("https://github.com/rstudio/hex-stickers/raw/master/PNG/
 
 .pull-left45[
 
-# `markdown`
+# `rmarkdown`
 
 <p align="left"><img style="height:440px" src="image/markdown.png"></p>
 ]
@@ -761,7 +761,7 @@ Das Netz ist vll. der beste Ort für Informationen über R.
 
 [R-bloggers](www.r-bloggers.com) informiert euch über die neusten R Entwicklungen. Meldet euch für den Newsletter an.
 
-[Stackoverflow](https://stackoverflow.com/questions/tagged/r) ist eine Seite für R Probleeme und Lösungen. Versucht selbst mal ein Problem zu posten. Oft bekommt ihr erstaunlich schnell Antwort.
+[Stackoverflow](https://stackoverflow.com/questions/tagged/r) ist eine Seite für R Probleme und Lösungen. Versucht selbst mal ein Problem zu posten. Oft bekommt ihr erstaunlich schnell Antwort.
 
 ]
 
@@ -845,7 +845,7 @@ Das Netz ist vll. der beste Ort für Informationen über R.
   </td>
   <td>
     <p align="center">
-      <a class="project-link" href="mailto:therbootcamp@gmail.com?subject=Preregistration for Statistics with R&body=I would like to preregister for the R Bootcamp on 'Statistik mit R' on March 13/14 in Basel, Switzerland." align="center">
+      <a class="project-link" href="mailto:therbootcamp@gmail.com?subject=Preregistration for Statistics with R&body=I would like to preregister for the R Bootcamp on 'Statistik mit R' on März 13/14 in Basel, Switzerland." align="center">
       <font style="font-size:20px;weight:700"><br>Statistik mit R<br></font><br>
       <br>
       <img src="https://therbootcamp.github.io/img/courses/2.png" height="230px" style="border-radius:50%;border:10px solid #E9ECEF"></img><br><br>
