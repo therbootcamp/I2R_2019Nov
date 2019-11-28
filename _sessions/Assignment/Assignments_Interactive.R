@@ -1,12 +1,14 @@
-### R Skript zu "Funktionen"
+### R Skript zu "Assignments"
 ### Kurs "Einführung in die moderne Datenanalyse mit R"
 ### Datum: November 2019
 ### Autor: The R Bootcamp
 
 
-### Jede Aktion wird durch eine Funktion ausgeführt ----------------------------
+### Objekt <- Function ----------------------------
 
-# Generiere einen Vektor, der die Elemente 1,2 und 3 enthält und nenne ihn x
+# Was ist Funktion, was ist Objekt
+
+
 
 # Wie viele (sichtbaren) Funktionen wurden hierbei aufgerufen?
 
