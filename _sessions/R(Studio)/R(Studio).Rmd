@@ -1,0 +1,278 @@
+---
+title: "R(Studio)"
+author: "Einführung in die moderne Datenanalyse mit R<br>
+  <a href='https://therbootcamp.github.io'>
+    Basel R Bootcamp
+  </a>
+  <br>
+  <a href='https://therbootcamp.github.io/I2R_2019Nov/'>
+    <i class='fas fa-clock' style='font-size:.9em;'></i>
+  </a>&#8239; 
+  <a href='https://therbootcamp.github.io'>
+    <i class='fas fa-home' style='font-size:.9em;' ></i>
+  </a>&#8239;
+  <a href='mailto:therbootcamp@gmail.com'>
+    <i class='fas fa-envelope' style='font-size: .9em;'></i>
+  </a>&#8239;
+  <a href='https://www.linkedin.com/company/basel-r-bootcamp/'>
+    <i class='fab fa-linkedin' style='font-size: .9em;'></i>
+  </a>"
+date: "November 2019"
+output:
+  xaringan::moon_reader:
+    css: ["default", "baselrbootcamp.css"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9'
+---
+
+layout: true
+
+<div class="my-footer">
+  <span style="text-align:center">
+    <span> 
+      <img src="https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/by-sa.png" height=14 style="vertical-align: middle"/>
+    </span>
+    <a href="https://therbootcamp.github.io/">
+      <span style="padding-left:82px"> 
+        <font color="#7E7E7E">
+          www.therbootcamp.com
+        </font>
+      </span>
+    </a>
+    <a href="https://therbootcamp.github.io/">
+      <font color="#7E7E7E">
+      Einführung in die moderne Datenanalyse mit R | November 2019
+      </font>
+    </a>
+    </span>
+  </div> 
+
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+# see: https://github.com/yihui/xaringan
+# install.packages("xaringan")
+# see: 
+# https://github.com/yihui/xaringan/wiki
+# https://github.com/gnab/remark/wiki/Markdown
+options(width=110)
+options(digits = 4)
+
+require(tidyverse)
+```
+
+
+
+# Agenda
+
+.pull-left4[
+
+1. <high>R(Studio)</high><br>
+&nbsp;&nbsp;&nbsp;- Was ist R?<br>
+&nbsp;&nbsp;&nbsp;- Was sind Programmiersprachen?<br>
+&nbsp;&nbsp;&nbsp;- Was ist RStudio?<br>
+&nbsp;&nbsp;&nbsp;- Warum RStudio?<br><br>
+2. Assignments<br>
+3. Funktionen<br>
+4. Data I/O<br>
+5. Analyse
+
+]
+
+.pull-right5[
+
+<p align = "center">
+<img src="image/computing.png"><br>
+<font style="font-size:10px">from <a href="https://xkcd.com//">xkcd.com</a></font>
+</p>
+
+]
+
+---
+
+# Was ist R
+
+.pull-left4[
+
+1. R(Studio)<br>
+&nbsp;&nbsp;&nbsp;- <high>Was ist R?</high><br>
+&nbsp;&nbsp;&nbsp;- Was sind Programmiersprachen?<br>
+&nbsp;&nbsp;&nbsp;- Was ist RStudio?<br>
+&nbsp;&nbsp;&nbsp;- Warum RStudio?<br><br>
+2. Assignments<br>
+3. Funktionen<br>
+4. Data I/O<br>
+5. Analyse
+
+]
+
+.pull-right5[
+
+R is eine **open-source Programmiersprache** für **statistische Berechnungen und Graphiken** die von der **R Foundation for Statistical Computing** supported wird. R wird **stark von Statistkern und Datenanalysten** für die Entwicklung von statistischer Software und Datenanalyse verwendet. 
+
+Der code der R unterliegt ist hauptsächlich in **C, Fortran, and R** geschrieben. R ist unter der GNU General Public License frei verfügbar, und es existieren Installationen für alle üblichen Systeme. Währed R für sich nur ein **command line interface** besitzt, exisistieren verschiedene **graphische Nutzerinterfaces**.
+
+R wurde 1993 von Ross Ihaka und Robert Gentlemen auf Basis der Programmiersprache S entwickelt.  
+
+<font style="font-size:12px">Adapted from <a href="https://en.wikipedia.org/wiki/Statistical_model">Wikipedia</a> (emphasis added)</font>
+
+]
+
+---
+
+# Was ist eine Programmiersprache
+
+.pull-left4[
+
+1. R(Studio)<br>
+&nbsp;&nbsp;&nbsp;- Was ist R?<br>
+&nbsp;&nbsp;&nbsp;- <high>Was sind Programmiersprachen?</high><br>
+&nbsp;&nbsp;&nbsp;- Was ist RStudio?<br>
+&nbsp;&nbsp;&nbsp;- Warum RStudio?<br><br>
+2. Assignments<br>
+3. Funktionen<br>
+4. Data I/O<br>
+5. Analyse
+
+]
+
+.pull-right5[
+
+Eine Programmiersprache ist eine **formale Sprache** die eine Reihe Instruktionen für verschiedenste Ziele spezifiziert. Programmiersprachen bestehen aus **instructionen für einen Computer** und werden genutzt werden um **Algorithmen zu implementieren**.
+
+<u>Algorithmus in Worten</u>
+1. Load data
+2. Extract variables
+3. Run analysis
+4. Print result
+
+<u>Algorithmus in R</u>
+<mono>data <- read.table(link)<br>
+vars <- data[,c('group','values')]<br>
+res <- lm(variable ~ group, data = vars)<br>
+summary(analysis)<br>
+</mono>
+]
+
+---
+
+# Was ist RStdudio
+
+.pull-left4[
+
+1. R(Studio)<br>
+&nbsp;&nbsp;&nbsp;- Was ist R?<br>
+&nbsp;&nbsp;&nbsp;- Was sind Programmiersprachen?<br>
+&nbsp;&nbsp;&nbsp;- <high>Was ist RStudio?</high><br>
+&nbsp;&nbsp;&nbsp;- Warum RStudio?<br><br>
+2. Assignments<br>
+3. Funktionen<br>
+4. Data I/O<br>
+5. Analyse
+
+]
+
+.pull-right5[
+
+<p align = "center">
+  <img src="image/rstudio.png" height = 350px>
+</p>
+
+]
+
+---
+
+# Warum RStudio?
+
+.pull-left4[
+
+1. R(Studio)<br>
+&nbsp;&nbsp;&nbsp;- Was ist R?<br>
+&nbsp;&nbsp;&nbsp;- Was sind Programmiersprachen?<br>
+&nbsp;&nbsp;&nbsp;- Was ist RStudio?<br>
+&nbsp;&nbsp;&nbsp;- <high>Warum RStudio?</high><br><br>
+2. Assignments<br>
+3. Funktionen<br>
+4. Data I/O<br>
+5. Analyse
+
+]
+
+.pull-right5[
+
+<p align = "left">
+  <img src="image/editor_edit.png">
+<br><br><br>
+Shortcut to <high>send to console</high>:<br><br2><font size = 6>&#8984;/ctrl + &#9166;</font><br><br2><br2>
+Shortcut to <high>rerun chunk</high>:<br><br2><font size = 6>  &#8984;/ctrl + &#8679; + p</font>
+</p>
+
+]
+
+---
+
+# Warum RStudio?
+
+.pull-left4[
+
+1. R(Studio)<br>
+&nbsp;&nbsp;&nbsp;- Was ist R?<br>
+&nbsp;&nbsp;&nbsp;- Was sind Programmiersprachen?<br>
+&nbsp;&nbsp;&nbsp;- Was ist RStudio?<br>
+&nbsp;&nbsp;&nbsp;- <high>Warum RStudio?</high><br><br>
+2. Assignments<br>
+3. Funktionen<br>
+4. Data I/O<br>
+5. Analyse
+
+]
+
+.pull-right5[
+
+<p align = "center">
+  <img src="image/auto_complete_1.png">
+</p>
+
+]
+
+
+---
+
+# Warum RStudio?
+
+.pull-left4[
+
+1. R(Studio)<br>
+&nbsp;&nbsp;&nbsp;- Was ist R?<br>
+&nbsp;&nbsp;&nbsp;- Was sind Programmiersprachen?<br>
+&nbsp;&nbsp;&nbsp;- Was ist RStudio?<br>
+&nbsp;&nbsp;&nbsp;- <high>Warum RStudio?</high><br><br>
+2. Assignments<br>
+3. Funktionen<br>
+4. Data I/O<br>
+5. Analyse
+
+]
+
+.pull-right5[
+
+<b>Projects help with...</b><br>
+save workspace and history &#9679; set project specific options &#9679; access files &#9679; version control &#9679; etc.
+<br><br>
+<p align = "left">
+  <img src="image/folder_structure.png">
+</p>
+
+]
+
+---
+
+class: middle, center
+
+<h1><a href="">Interactive</a></h1>
+

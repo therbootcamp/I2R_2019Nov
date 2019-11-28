@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
   <head>
-    <title>Funktionen</title>
+    <title>Assignments</title>
     <meta charset="utf-8" />
     <meta name="author" content="Einführung in die moderne Datenanalyse mit R   Basel R Bootcamp" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
@@ -11,7 +11,7 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Funktionen
+# Assignments
 ### Einführung in die moderne Datenanalyse mit R<br> <a href='https://therbootcamp.github.io'> Basel R Bootcamp </a> <br> <a href='https://therbootcamp.github.io/I2R_2019Nov/'> <i class='fas fa-clock' style='font-size:.9em;'></i> </a>  <a href='https://therbootcamp.github.io'> <i class='fas fa-home' style='font-size:.9em;' ></i> </a>  <a href='mailto:therbootcamp@gmail.com'> <i class='fas fa-envelope' style='font-size: .9em;'></i> </a>  <a href='https://www.linkedin.com/company/basel-r-bootcamp/'> <i class='fab fa-linkedin' style='font-size: .9em;'></i> </a>
 ### November 2019
 
@@ -45,22 +45,16 @@ layout: true
 
 
 
-
-
 .pull-left4[
 
 # Agenda
 
 1. R(Studio)&lt;br&gt;
-2. Assignments&lt;br&gt;
-3. &lt;high&gt;Funktionen&lt;/high&gt;&lt;br&gt;
-&lt;font style="font-size:16px"&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Alles geschieht durch eine Funktion&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Funktionen haben (Default) Argumente&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Die Klasse der Argumente ist wichtig&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Funktionen "leben" in Paketen&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Erhalte Hilfe mit &lt;mono&gt;?&lt;/mono&gt;&lt;br&gt;&lt;br&gt;
-&lt;/font&gt;
+2. &lt;high&gt;Assignments&lt;/high&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte&lt;br&gt;&lt;br&gt;
+3. Funktionen&lt;br&gt;
 4. Data I/O&lt;br&gt;
 5. Analyse
 
@@ -69,7 +63,7 @@ layout: true
 .pull-right5[
 &lt;br&gt;&lt;br&gt;
 &lt;p align = "center"&gt;
-&lt;img src="image/automation.png" &gt;&lt;br&gt;
+&lt;img src="image/goodcode.png" height=500px&gt;&lt;br&gt;
 &lt;font style="font-size:10px"&gt;from &lt;a href="https://xkcd.com//"&gt;xkcd.com&lt;/a&gt;&lt;/font&gt;
 &lt;/p&gt;
 
@@ -77,62 +71,202 @@ layout: true
 
 ---
 
-# Funktionen 
+# Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion
 
-.pull-left4[
+.pull-left5[
+
 1. R(Studio)&lt;br&gt;
 2. Assignments&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;high&gt;Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion&lt;/high&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte&lt;br&gt;&lt;br&gt;
 3. Funktionen&lt;br&gt;
-&lt;font style="font-size:16px"&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-&lt;high&gt;Alles geschieht durch eine Funktion&lt;/high&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Funktionen haben (Default) Argumente&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Die Klasse der Argumente ist wichtig&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Funktionen "leben" in Paketen&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Erhalte Hilfe mit &lt;mono&gt;?&lt;/mono&gt;&lt;br&gt;&lt;br&gt;
-&lt;/font&gt;
 4. Data I/O&lt;br&gt;
 5. Analyse
+
 ]
 
 .pull-right5[
-&lt;p align="center"&gt;&lt;img src="image/input_output.png" height="400"&gt;&lt;/p&gt;
+
+&lt;p align="center"&gt;
+  &lt;img src="image/assignment.png"&gt;
+&lt;/p&gt;
+
+
 ]
 
 ---
 
-# Funktionen 
+# &lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte
 
-.pull-left4[
+.pull-left5[
+
 1. R(Studio)&lt;br&gt;
 2. Assignments&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;high&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte&lt;/high&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte&lt;br&gt;&lt;br&gt;
 3. Funktionen&lt;br&gt;
-&lt;font style="font-size:16px"&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-&lt;high&gt;Alles geschieht durch eine Funktion&lt;/high&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Funktionen haben (Default) Argumente&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Die Klasse der Argumente ist wichtig&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Funktionen "leben" in Paketen&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Erhalte Hilfe mit &lt;mono&gt;?&lt;/mono&gt;&lt;br&gt;&lt;br&gt;
-&lt;/font&gt;
 4. Data I/O&lt;br&gt;
 5. Analyse
+
 ]
 
 .pull-right5[
 
 ```r
-# Funktion c()
+# ein Objekt names eins_zwei_drei
 eins_zwei_drei &lt;- c(1, 2, 3)
 
-# Funktion `+`()
-eins_zwei_drei + 100
+# Printe das Objekt
+print(eins_zwei_drei)
 ```
 
 ```
-## [1] 101 102 103
+## [1] 1 2 3
 ```
 
 ```r
-# Funktion print()
+# Printe das Objekt
+eins_zwei_drei
+```
+
+```
+## [1] 1 2 3
+```
+
+]
+
+---
+
+# &lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte
+
+.pull-left5[
+
+1. R(Studio)&lt;br&gt;
+2. Assignments&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;high&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte&lt;/high&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte&lt;br&gt;&lt;br&gt;
+3. Funktionen&lt;br&gt;
+4. Data I/O&lt;br&gt;
+5. Analyse
+
+]
+
+.pull-right5[
+
+```r
+# ein Objekt names eins_zwei_drei
+eins_zwei_drei &lt;- c(1, 2, 3)
+
+# Berechne den Mittelwert
+mean(eins_zwei_drei)
+```
+
+```
+## [1] 2
+```
+
+]
+
+---
+
+# &lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte
+
+.pull-left5[
+
+1. R(Studio)&lt;br&gt;
+2. Assignments&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;high&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte&lt;/high&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte&lt;br&gt;&lt;br&gt;
+3. Funktionen&lt;br&gt;
+4. Data I/O&lt;br&gt;
+5. Analyse
+
+]
+
+.pull-right5[
+
+```r
+# ein Objekt names eins_zwei_drei
+eins_zwei_drei &lt;- c(1, 2, 3)
+
+# Berechne den Mittelwert
+ergebnis &lt;- mean(eins_zwei_drei)
+
+# Printe Ergebnis
+ergebnis
+```
+
+```
+## [1] 2
+```
+
+]
+
+---
+
+# &lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte
+
+.pull-left5[
+
+1. R(Studio)&lt;br&gt;
+2. Assignments&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;high&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte&lt;/high&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte&lt;br&gt;&lt;br&gt;
+3. Funktionen&lt;br&gt;
+4. Data I/O&lt;br&gt;
+5. Analyse
+
+]
+
+.pull-right5[
+
+```r
+# ein Objekt names eins_zwei_drei
+eins_zwei_drei &lt;- c(1, 2, 3)
+
+# Berechne den Mittelwert
+ergebnis &lt;- mean(eins_zwei_drei)
+
+# Benutze Ergebnis
+ergebnis * 10
+```
+
+```
+## [1] 20
+```
+
+]
+
+
+---
+
+# &lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte
+
+.pull-left5[
+
+1. R(Studio)&lt;br&gt;
+2. Assignments&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;high&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte&lt;/high&gt;&lt;br&gt;&lt;br&gt;
+3. Funktionen&lt;br&gt;
+4. Data I/O&lt;br&gt;
+5. Analyse
+
+]
+
+.pull-right5[
+
+```r
+# ein Objekt names eins_zwei_drei
+eins_zwei_drei &lt;- c(1, 2, 3)
+
+# Printe das Objekt
 eins_zwei_drei
 ```
 
@@ -141,211 +275,113 @@ eins_zwei_drei
 ```
 
 ```r
-# Funktion mean()
-mean(x = eins_zwei_drei)
+# Printe das Objekt
+eins_zwei_drei + 100
 ```
 
 ```
-## [1] 2
+## [1] 101 102 103
 ```
+
+```r
+# Printe das Objekt
+eins_zwei_drei
+```
+
+```
+## [1] 1 2 3
+```
+
 ]
 
 
 ---
 
-# Funktionen 
+# &lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte
 
-.pull-left4[
+.pull-left5[
+
 1. R(Studio)&lt;br&gt;
 2. Assignments&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;high&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte&lt;/high&gt;&lt;br&gt;&lt;br&gt;
 3. Funktionen&lt;br&gt;
-&lt;font style="font-size:16px"&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Alles geschieht durch eine Funktion&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-&lt;high&gt;Funktionen haben (Default) Argumente&lt;/high&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Die Klasse der Argumente ist wichtig&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Funktionen "leben" in Paketen&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Erhalte Hilfe mit &lt;mono&gt;?&lt;/mono&gt;&lt;br&gt;&lt;br&gt;
-&lt;/font&gt;
 4. Data I/O&lt;br&gt;
 5. Analyse
+
 ]
 
 .pull-right5[
 
 ```r
-# Kein Argument
-mean()
+# ein Objekt names eins_zwei_drei
+eins_zwei_drei &lt;- c(1, 2, 3)
+
+# Printe das Objekt
+eins_zwei_drei
 ```
 
 ```
-## Error in mean.default(): argument "x" is missing, with no default
-```
-
-```r
-# Ein (notwendiges) Argument
-mean(c(1, 2, 3))
-```
-
-```
-## [1] 2
+## [1] 1 2 3
 ```
 
 ```r
-# Hinzufügen eines fehlenden Werts (NA)
-mean(c(1, 2, 3, NA))
+# Printe das Objekt
+eins_zwei_drei &lt;- eins_zwei_drei + 100
+
+# Printe das Objekt
+eins_zwei_drei
 ```
 
 ```
-## [1] NA
+## [1] 101 102 103
 ```
 
-```r
-# Ändere den Default zur Entfernung des NAs
-mean(c(1, 2, 3, NA), na.rm = TRUE)
-```
-
-```
-## [1] 2
-```
 ]
 
 ---
 
-# Funktionen 
+# &lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte
 
-.pull-left4[
+.pull-left5[
+
 1. R(Studio)&lt;br&gt;
 2. Assignments&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;high&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte&lt;/high&gt;&lt;br&gt;&lt;br&gt;
 3. Funktionen&lt;br&gt;
-&lt;font style="font-size:16px"&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Alles geschieht durch eine Funktion&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Funktionen haben (Default) Argumente&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-&lt;high&gt;Die Klasse der Argumente ist wichtig&lt;/high&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Funktionen "leben" in Paketen&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Erhalte Hilfe mit &lt;mono&gt;?&lt;/mono&gt;&lt;br&gt;&lt;br&gt;
-&lt;/font&gt;
 4. Data I/O&lt;br&gt;
 5. Analyse
+
 ]
 
 .pull-right5[
 
 ```r
-# Berechne Mittelwert von c(1, 2, 3)
-mean(c(1, 2, 3))
+# ein Objekt names eins_zwei_drei
+eins_zwei_drei &lt;- c(1, 2, 3)
+
+# Ergänze um weitere Zahl
+und_vier &lt;- c(eins_zwei_drei, 4)
+
+# Printe das Objekt
+und_vier
 ```
 
 ```
-## [1] 2
+## [1] 1 2 3 4
 ```
 
-```r
-# Berechne Mittelwert von c('1', '2', '3')
-mean(c("1", "2", "3"))
-```
-
-```
-## Warning in mean.default(c("1", "2", "3")): argument is not numeric or logical: returning NA
-```
-
-```
-## [1] NA
-```
 ]
 
-
----
-
-# Funktionen 
-
-.pull-left4[
-1. R(Studio)&lt;br&gt;
-2. Assignments&lt;br&gt;
-3. Funktionen&lt;br&gt;
-&lt;font style="font-size:16px"&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Alles geschieht durch eine Funktion&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Funktionen haben (Default) Argumente&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Die Klasse der Argumente ist wichtig&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-&lt;high&gt;Funktionen "leben" in Paketen&lt;/high&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Erhalte Hilfe mit &lt;mono&gt;?&lt;/mono&gt;&lt;br&gt;&lt;br&gt;
-&lt;/font&gt;
-4. Data I/O&lt;br&gt;
-5. Analyse
-]
-
-.pull-right5[
-&lt;p align="center"&gt;&lt;img src="image/pakete.png" height="400"&gt;&lt;/p&gt;
-]
-
----
-
-# Funktionen 
-
-.pull-left4[
-1. R(Studio)&lt;br&gt;
-2. Assignments&lt;br&gt;
-3. Funktionen&lt;br&gt;
-&lt;font style="font-size:16px"&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Alles geschieht durch eine Funktion&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Funktionen haben (Default) Argumente&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Die Klasse der Argumente ist wichtig&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-&lt;high&gt;Funktionen "leben" in Paketen&lt;/high&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Erhalte Hilfe mit &lt;mono&gt;?&lt;/mono&gt;&lt;br&gt;&lt;br&gt;
-&lt;/font&gt;
-4. Data I/O&lt;br&gt;
-5. Analyse
-]
-
-.pull-right5[
-
-&lt;high&gt;Installiere&lt;/high&gt; Pakete &lt;high&gt;einmal&lt;/high&gt; mit `install.packages()`
-
-
-```r
-install.packages("tidyverse")
-```
-&lt;br2&gt;
-&lt;high&gt;Lade&lt;/high&gt; existierende Pakete &lt;high&gt;jedes mal&lt;/high&gt; mit `library()`
-
-
-```r
-library(tidyverse)
-```
-
-&lt;p align="left"&gt;&lt;img src="image/tidyverse.png" height="180"&gt;&lt;/p&gt;
-]
----
-
-# Funktionen 
-
-.pull-left4[
-1. R(Studio)&lt;br&gt;
-2. Assignments&lt;br&gt;
-3. Funktionen&lt;br&gt;
-&lt;font style="font-size:16px"&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Alles geschieht durch eine Funktion&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Funktionen haben (Default) Argumente&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Die Klasse der Argumente ist wichtig&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-Funktionen "leben" in Paketen&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;-&lt;high&gt;Erhalte Hilfe mit &lt;mono&gt;?&lt;/mono&gt;&lt;/high&gt;&lt;br&gt;&lt;br&gt;
-&lt;/font&gt;
-4. Data I/O&lt;br&gt;
-5. Analyse
-]
-
-.pull-right5[
-
-```r
-?cor
-```
-&lt;p align="center"&gt;&lt;img src="https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/help_cor.png" width="500"&gt;&lt;/p&gt;
-]
 
 ---
 
 class: middle, center
 
-&lt;h1&gt;&lt;a href="https://therbootcamp.github.io/I2R_2019Nov/_sessions/Funktionen/Funktionen_Interactive.R"&gt;Interactive&lt;/a&gt;&lt;/h1&gt;
+&lt;h1&gt;&lt;a href=""&gt;Interactive&lt;/a&gt;&lt;/h1&gt;
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
