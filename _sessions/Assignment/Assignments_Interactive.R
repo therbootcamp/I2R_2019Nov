@@ -4,60 +4,39 @@
 ### Autor: The R Bootcamp
 
 
-### Objekt <- Function ----------------------------
+### <- kreiert Objekte ----------------------------
 
 # Was ist Funktion, was ist Objekt
+eins_zwei_drei <- c(1, 2, 3)
 
+# Funktioniert das?
+c(4, 5, 6) -> vier_fünf_sechs
 
+# Funktioniert das?
+sieben_acht_neun = c(7, 8, 9)
 
-# Wie viele (sichtbaren) Funktionen wurden hierbei aufgerufen?
+### <- verändert Objekte ----------------------------
 
-# Zeige den Vektor x in der Konsole an
+# Ändert sich hier das Objekt?
+eins_zwei_drei + 10
 
-# Wie viele (sichtbaren) Funktionen wurden hierbei aufgerufen?
+# Ändert sich hier das Objekt?
+eins_zwei_drei_plus10 <- eins_zwei_drei + 10
 
-### Funktionen haben help files ------------------------------------------------
+# Was kommt hier raus
+was_ist_das <- eins_zwei_drei + vier_fünf_sechs
 
-# Um zu lernen wie eine Funktion funktioniert, können wir das help file aufrufen.
-# Schaue dir das help file der "sum()" Funktion an.
+# Was kommt hier raus
+was_ist_das <- eins_zwei_drei + vier_fünf_sechs * sieben_acht_neun
 
-# Welches sind die wichtigsten Abschnitte eines help files (Achtung subjektiv und 
-# vom jeweiligen help file abhängig)
+# Was steckt hinter dem Objekt
+was_ist_das
 
-### Funktionen haben (normalerweise) Argumente ---------------------------------
+### Objekt <- Funktion ----------------------------
 
-# Was ist ein Argument?
+# Wo ist das Objekt? Und wo die Funktion?
+eins_zwei_drei + 10
 
-# Die "sum()" Funktion berechnet den Mittelwert eines Objekts. Benutze sie um
-# die Summe aller Elemente in x zu berechnen
-
-# Im help file vorhin haben wir gesehen, dass sum ein Argument "na.rm" hat;
-# weshalb funktioniert "sum(x)" obwohl wir das Argument nirgends angeben?
-
-# Füge ein NA an der vierten Position des Vektors x hinzu
-
-# Berechne nun nochmals die Summe von x. Was ist das Ergebnis und warum?
-
-# Wiederhole die Berechnung der letzten Aufgabe, so dass das Resultat 6 ergibt
-
-### Die Klasse des Inputs muss mit der vorgegebenen Klasse übereinstimmen ------
-
-# Teste die Klasse von x. Was bedeuetet das Ergebnis?
-
-# Füge ein "a" an der fünften Position von x hinzu
-
-# Teste die Klasse von x. Hat sich etwas geändert? Weshalb?
-
-# Berechne nochmals die Summe von x. Was passiert und weshalb
-
-# Plotte den Vektor x mit der plot() Funktion. Was ist passiert?
-
-# Erstelle eine matrix mit zwei Spalten und den Werten von 1 bis 10. Nenne sie y
-
-# Überprüfe, ob y tatsächlich die Klasse Matrix hat
-
-# Berechne die Summe der Matrix
-
-# Die sum() Funktion hat die Summe über alle Zellen der Matrix berechnet. Was wenn
-# wir nur die Summe pro Zeile wollen?
+# Wo ist das Objekt? Und wo die Funktion?
+eins_zwei_drei
 
