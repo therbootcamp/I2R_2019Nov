@@ -274,5 +274,5 @@ save workspace and history &#9679; set project specific options &#9679; access f
 
 class: middle, center
 
-<h1><a href="">Interactive</a></h1>
+<h1><a href="">Interaktiv</a></h1>
 
