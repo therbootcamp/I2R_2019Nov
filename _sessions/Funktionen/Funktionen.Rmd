@@ -72,9 +72,9 @@ require(tidyverse)
 ```
 
 
-.pull-left4[
-
 # Agenda
+
+.pull-left4[
 
 1. R(Studio)<br>
 2. Assignments<br>
@@ -92,7 +92,6 @@ require(tidyverse)
 ]
 
 .pull-right5[
-<br><br>
 <p align = "center">
 <img src="image/automation.png" ><br>
 <font style="font-size:10px">from <a href="https://xkcd.com//">xkcd.com</a></font>
