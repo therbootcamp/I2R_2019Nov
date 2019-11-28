@@ -420,7 +420,7 @@ Financial times, July 2018
 ### Ehemals Contra
 1. **Unschön**e Sprache wird überarbeitet ([Tidyverse](https://www.tidyverse.org/))
 2. **Langsam**e Elemente werden ersetzt ([Rcpp](http://www.rcpp.org/))
-3. **Brücken** zu externen Tools/Sprachen ([rPython](http://rpython.r-forge.r-project.org/), [tensorflow](https://tensorflow.rstudio.com/)
+3. **Brücken** zu externen Tools/Sprachen ([rPython](http://rpython.r-forge.r-project.org/), [tensorflow](https://tensorflow.rstudio.com/))
 
 ]
 
