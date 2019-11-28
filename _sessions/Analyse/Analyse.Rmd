@@ -76,15 +76,13 @@ require(tidyverse)
 3. Funktionen<br>
 4. Data I/O<br>
 5. <high>Analyse</high><br>
-&nbsp;&nbsp;&nbsp;-Daten von Festplatte lesen<br>
-&nbsp;&nbsp;&nbsp;-Daten leben in <mono>data.frames</mono><br>
-&nbsp;&nbsp;&nbsp;-Daten auf die Festplatte schreiben<br><br>
-
+&nbsp;&nbsp;&nbsp;-Einfache Statistiken<br>
+&nbsp;&nbsp;&nbsp;-Einfache Graphiken<br>
 ]
 
 .pull-right5[
 <p align = "center">
-<img src="image/fixing.png"><br>
+<img src="image/artifacts.png" height=420px><br>
 <font style="font-size:10px">from <a href="https://xkcd.com//">xkcd.com</a></font>
 </p>
 
@@ -92,7 +90,7 @@ require(tidyverse)
 
 ---
 
-# Daten von Festplatte lesen
+# Agenda
 
 .pull-left4[
 
@@ -100,291 +98,9 @@ require(tidyverse)
 2. Assignments<br>
 3. Funktionen<br>
 4. Data I/O<br>
-&nbsp;&nbsp;&nbsp;-<high>Daten von Festplatte lesen</high><br>
-&nbsp;&nbsp;&nbsp;-Daten leben in <mono>data.frames</mono><br>
-&nbsp;&nbsp;&nbsp;-Daten auf die Festplatte schreiben<br><br>
-5. Analyse
-
-]
-
-.pull-right5[
-
-```{r, echo = F}
-options(max.print=50)
-```
-
-```{r}
-# Lese Daten ein
-read.csv('1_Data/Tourismus.csv')
-```
-]
-
----
-
-# Daten von Festplatte lesen
-
-.pull-left4[
-
-1. R(Studio)<br>
-2. Assignments<br>
-3. Funktionen<br>
-4. Data I/O<br>
-&nbsp;&nbsp;&nbsp;-<high>Daten von Festplatte lesen</high><br>
-&nbsp;&nbsp;&nbsp;-Daten leben in <mono>data.frames</mono><br>
-&nbsp;&nbsp;&nbsp;-Daten auf die Festplatte schreiben<br><br>
-5. Analyse
-
-]
-
-.pull-right5[
-
-```{r, echo = F}
-options(max.print=50)
-```
-
-```{r}
-# Lese Daten in ein Objekt ein
-daten <- read.csv('1_Data/Tourismus.csv')
-
-# Printe Daten
-daten
-
-```
-]
-
-
----
-
-# Daten von Festplatte lesen
-
-.pull-left4[
-
-1. R(Studio)<br>
-2. Assignments<br>
-3. Funktionen<br>
-4. Data I/O<br>
-&nbsp;&nbsp;&nbsp;-<high>Daten von Festplatte lesen</high><br>
-&nbsp;&nbsp;&nbsp;-Daten leben in <mono>data.frames</mono><br>
-&nbsp;&nbsp;&nbsp;-Daten auf die Festplatte schreiben<br><br>
-5. Analyse
-
-]
-
-.pull-right5[
-<p align = "center">
-<img src="image/autocompl1.png">
-</p>
-
-]
-
----
-
-# Daten von Festplatte lesen
-
-.pull-left4[
-
-1. R(Studio)<br>
-2. Assignments<br>
-3. Funktionen<br>
-4. Data I/O<br>
-&nbsp;&nbsp;&nbsp;-<high>Daten von Festplatte lesen</high><br>
-&nbsp;&nbsp;&nbsp;-Daten leben in <mono>data.frames</mono><br>
-&nbsp;&nbsp;&nbsp;-Daten auf die Festplatte schreiben<br><br>
-5. Analyse
-
-]
-
-.pull-right5[
-<p align = "center">
-<img src="image/autocompl2a.png">
-</p>
-
-]
-
-
----
-
-# Daten von Festplatte lesen
-
-.pull-left4[
-
-1. R(Studio)<br>
-2. Assignments<br>
-3. Funktionen<br>
-4. Data I/O<br>
-&nbsp;&nbsp;&nbsp;-<high>Daten von Festplatte lesen</high><br>
-&nbsp;&nbsp;&nbsp;-Daten leben in <mono>data.frames</mono><br>
-&nbsp;&nbsp;&nbsp;-Daten auf die Festplatte schreiben<br><br>
-5. Analyse
-
-]
-
-.pull-right5[
-<p align = "center">
-<img src="image/autocompl2b.png">
-</p>
-
-]
-
----
-
-# Daten von Festplatte lesen
-
-.pull-left4[
-
-1. R(Studio)<br>
-2. Assignments<br>
-3. Funktionen<br>
-4. Data I/O<br>
-&nbsp;&nbsp;&nbsp;-Daten von Festplatte lesen<br>
-&nbsp;&nbsp;&nbsp;-<high>Daten leben in <mono>data.frames</mono></high><br>
-&nbsp;&nbsp;&nbsp;-Daten auf die Festplatte schreiben<br><br>
-5. Analyse
-
-]
-
-.pull-right5[
-
-```{r, echo = F}
-options(max.print=20,width=40)
-```
-
-```{r}
-# Lese Daten in ein Objekt ein
-daten <- read.csv('1_Data/Tourismus.csv')
-
-# Klasse der Daten
-class(daten)
-
-# Dimensionen der Daten
-dim(daten)
-
-# Namen der Variablen in den Daten
-names(daten)
-
-```
-]
-
-
----
-
-# Daten von Festplatte lesen
-
-.pull-left4[
-
-1. R(Studio)<br>
-2. Assignments<br>
-3. Funktionen<br>
-4. Data I/O<br>
-&nbsp;&nbsp;&nbsp;-Daten von Festplatte lesen<br>
-&nbsp;&nbsp;&nbsp;-<high>Daten leben in <mono>data.frames</mono></high><br>
-&nbsp;&nbsp;&nbsp;-Daten auf die Festplatte schreiben<br><br>
-5. Analyse
-
-]
-
-.pull-right5[
-
-```{r, echo = F}
-options(max.print=20,width=40)
-```
-
-```{r}
-# Lese Daten in ein Objekt ein
-daten <- read.csv('1_Data/Tourismus.csv')
-
-# Klasse der Daten
-daten$Land
-
-```
-]
-
----
-
-# Daten von Festplatte lesen
-
-.pull-left4[
-
-1. R(Studio)<br>
-2. Assignments<br>
-3. Funktionen<br>
-4. Data I/O<br>
-&nbsp;&nbsp;&nbsp;-Daten von Festplatte lesen<br>
-&nbsp;&nbsp;&nbsp;-<high>Daten leben in <mono>data.frames</mono></high><br>
-&nbsp;&nbsp;&nbsp;-Daten auf die Festplatte schreiben<br><br>
-5. Analyse
-
-]
-
-.pull-right5[
-
-```{r, echo = F}
-options(max.print=20,width=40)
-```
-
-```{r}
-# Lese Daten in ein Objekt ein
-daten <- read.csv('1_Data/Tourismus.csv')
-
-# Klasse der Daten
-class(daten$Land)
-
-```
-]
-
----
-
-# Daten von Festplatte lesen
-
-.pull-left4[
-
-1. R(Studio)<br>
-2. Assignments<br>
-3. Funktionen<br>
-4. Data I/O<br>
-&nbsp;&nbsp;&nbsp;-Daten von Festplatte lesen<br>
-&nbsp;&nbsp;&nbsp;-<high>Daten leben in <mono>data.frames</mono></high><br>
-&nbsp;&nbsp;&nbsp;-Daten auf die Festplatte schreiben<br><br>
-5. Analyse
-
-]
-
-.pull-right5[
-
-```{r, echo = F}
-options(max.print=8,width=40)
-```
-
-```{r}
-# Lese Daten in ein Objekt ein
-daten <- read.csv('1_Data/Tourismus.csv',
-                  stringsAsFactors = FALSE)
-
-# Klasse der Daten
-class(daten$Land)
-
-# Klasse der Daten
-daten$Land
-
-```
-]
-
-
----
-
-# Daten von Festplatte lesen
-
-.pull-left4[
-
-1. R(Studio)<br>
-2. Assignments<br>
-3. Funktionen<br>
-4. Data I/O<br>
-&nbsp;&nbsp;&nbsp;-Daten von Festplatte lesen<br>
-&nbsp;&nbsp;&nbsp;-<high>Daten leben in <mono>data.frames</mono></high><br>
-&nbsp;&nbsp;&nbsp;-Daten auf die Festplatte schreiben<br><br>
-5. Analyse
-
+5. Analyse<br>
+&nbsp;&nbsp;&nbsp;-<high>Einfache Statistiken</high><br>
+&nbsp;&nbsp;&nbsp;-Einfache Graphiken<br>
 ]
 
 .pull-right5[
@@ -397,15 +113,21 @@ options(max.print=80,width=40)
 # Lese Daten in ein Objekt ein
 daten <- read.csv('1_Data/Tourismus.csv')
 
-# Klasse der Daten
-daten$Dauer
+# Mittlere Dauer
+mean(daten$Dauer)
+
+# Median Dauer
+median(daten$Dauer)
+
+# Standardabweichung Dauer
+sd(daten$Dauer)
 
 ```
 ]
 
 ---
 
-# Daten von Festplatte lesen
+# Agenda
 
 .pull-left4[
 
@@ -413,11 +135,9 @@ daten$Dauer
 2. Assignments<br>
 3. Funktionen<br>
 4. Data I/O<br>
-&nbsp;&nbsp;&nbsp;-Daten von Festplatte lesen<br>
-&nbsp;&nbsp;&nbsp;-<high>Daten leben in <mono>data.frames</mono></high><br>
-&nbsp;&nbsp;&nbsp;-Daten auf die Festplatte schreiben<br><br>
-5. Analyse
-
+5. Analyse<br>
+&nbsp;&nbsp;&nbsp;-<high>Einfache Statistiken</high><br>
+&nbsp;&nbsp;&nbsp;-Einfache Graphiken<br>
 ]
 
 .pull-right5[
@@ -430,16 +150,15 @@ options(max.print=80,width=40)
 # Lese Daten in ein Objekt ein
 daten <- read.csv('1_Data/Tourismus.csv')
 
-# Klasse der Daten
-class(daten$Dauer)
+# Zusammenfassung Dauer
+summary(daten$Dauer)
 
 ```
 ]
 
-
 ---
 
-# Daten von Festplatte lesen
+# Agenda
 
 .pull-left4[
 
@@ -447,11 +166,9 @@ class(daten$Dauer)
 2. Assignments<br>
 3. Funktionen<br>
 4. Data I/O<br>
-&nbsp;&nbsp;&nbsp;-Daten von Festplatte lesen<br>
-&nbsp;&nbsp;&nbsp;-Daten leben in <mono>data.frames</mono><br>
-&nbsp;&nbsp;&nbsp;-<high>Daten auf die Festplatte schreiben</high><br><br>
-5. Analyse
-
+5. Analyse<br>
+&nbsp;&nbsp;&nbsp;-<high>Einfache Statistiken</high><br>
+&nbsp;&nbsp;&nbsp;-Einfache Graphiken<br>
 ]
 
 .pull-right5[
@@ -461,14 +178,306 @@ options(max.print=80,width=40)
 ```
 
 ```{r}
-# Schreibe Daten auf die Festplatte als csv
-write.csv(daten, '1_Data/Tourismus_neu.csv')
+# Lese Daten in ein Objekt ein
+daten <- read.csv('1_Data/Tourismus.csv')
 
-# Schreibe Daten auf die Festplatte als RDS
-saveRDS(daten, '1_Data/Tourismus_neu.RDS')
+# Zusammenhang Dauer und Besucher
+cor(daten$Dauer, daten$Besucher)
 
 ```
 ]
+
+---
+
+# Agenda
+
+.pull-left4[
+
+1. R(Studio)<br>
+2. Assignments<br>
+3. Funktionen<br>
+4. Data I/O<br>
+5. Analyse<br>
+&nbsp;&nbsp;&nbsp;-<high>Einfache Statistiken</high><br>
+&nbsp;&nbsp;&nbsp;-Einfache Graphiken<br>
+]
+
+.pull-right5[
+
+```{r, echo = F}
+options(max.print=80,width=40)
+```
+
+```{r}
+# Lese Daten in ein Objekt ein
+daten <- read.csv('1_Data/Tourismus.csv')
+
+# Dauer nach Region
+aggregate(daten$Dauer, list(daten$Region), mean)
+
+```
+]
+
+---
+
+# Agenda
+
+.pull-left4[
+
+1. R(Studio)<br>
+2. Assignments<br>
+3. Funktionen<br>
+4. Data I/O<br>
+5. Analyse<br>
+&nbsp;&nbsp;&nbsp;-<high>Einfache Statistiken</high><br>
+&nbsp;&nbsp;&nbsp;-Einfache Graphiken<br>
+]
+
+.pull-right5[
+
+```{r, echo = F}
+options(max.print=80,width=40)
+```
+
+```{r}
+# Lese Daten in ein Objekt ein
+daten <- read.csv('1_Data/Tourismus.csv')
+
+# Vergleich der Dauer nach Region
+anova(lm(daten$Dauer ~ daten$Region))
+
+```
+]
+
+---
+
+# Agenda
+
+.pull-left4[
+
+1. R(Studio)<br>
+2. Assignments<br>
+3. Funktionen<br>
+4. Data I/O<br>
+5. Analyse<br>
+&nbsp;&nbsp;&nbsp;-<high>Einfache Statistiken</high><br>
+&nbsp;&nbsp;&nbsp;-Einfache Graphiken<br>
+]
+
+.pull-right5[
+
+```{r, echo = F}
+options(max.print=80,width=40)
+```
+
+```{r}
+# Lese Daten in ein Objekt ein
+daten <- read.csv('1_Data/Tourismus.csv')
+
+# Vergleich der Dauer nach Region
+anova(lm(daten$Besucher ~ daten$Region))
+
+```
+]
+
+---
+
+# Agenda
+
+.pull-left4[
+
+1. R(Studio)<br>
+2. Assignments<br>
+3. Funktionen<br>
+4. Data I/O<br>
+5. Analyse<br>
+&nbsp;&nbsp;&nbsp;-Einfache Statistiken<br>
+&nbsp;&nbsp;&nbsp;-<high>Einfache Graphiken</high><br>
+]
+
+.pull-right5[
+
+```{r, echo = F}
+options(max.print=80,width=40)
+```
+
+```{r, fig.height=5, fig.width=7, dpi=300}
+# Graphik Dauer
+hist(daten$Dauer)
+
+```
+]
+
+---
+
+# Agenda
+
+.pull-left4[
+
+1. R(Studio)<br>
+2. Assignments<br>
+3. Funktionen<br>
+4. Data I/O<br>
+5. Analyse<br>
+&nbsp;&nbsp;&nbsp;-Einfache Statistiken<br>
+&nbsp;&nbsp;&nbsp;-<high>Einfache Graphiken</high><br>
+]
+
+.pull-right5[
+
+```{r, echo = F}
+options(max.print=80,width=40)
+```
+
+```{r, fig.height=5, fig.width=7, dpi=300}
+# Graphik Dauer
+hist(daten$Besucher)
+
+```
+]
+
+---
+
+# Agenda
+
+.pull-left4[
+
+1. R(Studio)<br>
+2. Assignments<br>
+3. Funktionen<br>
+4. Data I/O<br>
+5. Analyse<br>
+&nbsp;&nbsp;&nbsp;-Einfache Statistiken<br>
+&nbsp;&nbsp;&nbsp;-<high>Einfache Graphiken</high><br>
+]
+
+.pull-right5[
+
+```{r, echo = F}
+options(max.print=80,width=40)
+```
+
+```{r, fig.height=5, fig.width=7, dpi=300}
+# Graphik Dauer
+plot(daten$Besucher, daten$Dauer)
+
+```
+]
+
+---
+
+# Agenda
+
+.pull-left4[
+
+1. R(Studio)<br>
+2. Assignments<br>
+3. Funktionen<br>
+4. Data I/O<br>
+5. Analyse<br>
+&nbsp;&nbsp;&nbsp;-Einfache Statistiken<br>
+&nbsp;&nbsp;&nbsp;-<high>Einfache Graphiken</high><br>
+]
+
+.pull-right5[
+
+```{r, echo = F}
+options(max.print=80,width=40)
+```
+
+```{r, fig.height=5, fig.width=7, dpi=300}
+# Graphik Dauer
+plot(daten$Besucher, daten$Dauer,
+     log = "xy")
+
+```
+]
+
+---
+
+# Agenda
+
+.pull-left4[
+
+1. R(Studio)<br>
+2. Assignments<br>
+3. Funktionen<br>
+4. Data I/O<br>
+5. Analyse<br>
+&nbsp;&nbsp;&nbsp;-Einfache Statistiken<br>
+&nbsp;&nbsp;&nbsp;-<high>Einfache Graphiken</high><br>
+]
+
+.pull-right5[
+
+```{r, echo = F}
+options(max.print=80,width=40)
+```
+
+```{r, fig.height=5, fig.width=7, dpi=300}
+# Graphik Dauer
+plot(daten$Besucher, daten$Dauer,
+     log = "xy", col = 'red', pch = 16)
+
+```
+]
+
+---
+
+# Agenda
+
+.pull-left4[
+
+1. R(Studio)<br>
+2. Assignments<br>
+3. Funktionen<br>
+4. Data I/O<br>
+5. Analyse<br>
+&nbsp;&nbsp;&nbsp;-Einfache Statistiken<br>
+&nbsp;&nbsp;&nbsp;-<high>Einfache Graphiken</high><br>
+]
+
+.pull-right5[
+
+```{r, echo = F}
+options(max.print=80,width=40)
+```
+
+```{r, fig.height=5, fig.width=7, dpi=300}
+# Graphik Dauer
+boxplot(daten$Dauer ~ daten$Region,
+        log="y")
+```
+]
+
+---
+
+# Agenda
+
+.pull-left4[
+
+1. R(Studio)<br>
+2. Assignments<br>
+3. Funktionen<br>
+4. Data I/O<br>
+5. Analyse<br>
+&nbsp;&nbsp;&nbsp;-Einfache Statistiken<br>
+&nbsp;&nbsp;&nbsp;-<high>Einfache Graphiken</high><br>
+]
+
+.pull-right5[
+
+```{r, echo = F}
+options(max.print=80,width=40)
+```
+
+```{r, fig.height=5, fig.width=7, dpi=300}
+# Graphik Dauer
+boxplot(daten$Besucher ~ daten$Region,
+        log="y")
+```
+]
+
 
 ---
 
