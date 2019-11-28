@@ -6,13 +6,11 @@
 
 ### Jede Aktion wird durch eine Funktion ausgeführt ----------------------------
 
-# Generiere einen Vektor, der die Elemente 1,2 und 3 enthält und nenne ihn x
+# Generiere einen Vektor, der die Elemente 1,2 und 3 enthält und nenne ihn my_vec.
 
 # Wie viele (sichtbaren) Funktionen wurden hierbei aufgerufen?
 
-# Zeige den Vektor x in der Konsole an
-
-# Wie viele (sichtbaren) Funktionen wurden hierbei aufgerufen?
+# Zeige den Vektor my_vec in der Konsole an.
 
 ### Funktionen haben help files ------------------------------------------------
 
@@ -20,41 +18,38 @@
 # Schaue dir das help file der "sum()" Funktion an.
 
 # Welches sind die wichtigsten Abschnitte eines help files (Achtung subjektiv und 
-# vom jeweiligen help file abhängig)
+# vom jeweiligen help file abhängig).
 
 ### Funktionen haben (normalerweise) Argumente ---------------------------------
 
-# Was ist ein Argument?
+# Die "sum()" Funktion berechnet die Summe eines Objekts. Benutze sie um
+# die Summe aller Elemente in my_vec zu berechnen.
 
-# Die "sum()" Funktion berechnet den Mittelwert eines Objekts. Benutze sie um
-# die Summe aller Elemente in x zu berechnen
+# Füge mit Hilfe des folgenden Codes ein NA am Ende des Vektors my_vec hinzu.
+my_vec <- c(my_vec, NA)
 
-# Im help file vorhin haben wir gesehen, dass sum ein Argument "na.rm" hat;
-# weshalb funktioniert "sum(x)" obwohl wir das Argument nirgends angeben?
+# Berechne nun nochmals die Summe von my_vec. Was ist das Ergebnis und warum?
 
-# Füge ein NA an der vierten Position des Vektors x hinzu
-
-# Berechne nun nochmals die Summe von x. Was ist das Ergebnis und warum?
-
-# Wiederhole die Berechnung der letzten Aufgabe, so dass das Resultat 6 ergibt
+# Wiederhole die Berechnung der letzten Aufgabe, so dass das Resultat 6 ergibt.
 
 ### Die Klasse des Inputs muss mit der vorgegebenen Klasse übereinstimmen ------
 
-# Teste die Klasse von x. Was bedeuetet das Ergebnis?
+# Teste die Klasse von my_vec.
 
-# Füge ein "a" an der fünften Position von x hinzu
+# Ersetze mit Hilfe des folgenden Codes das NA in my_vec durch ein "a".
+my_vec[4] <- "a"
 
-# Teste die Klasse von x. Hat sich etwas geändert? Weshalb?
+# Teste die Klasse von my_vec. Weshalb hat sich die Klasse geändert?
 
-# Berechne nochmals die Summe von x. Was passiert und weshalb
+# Berechne nochmals die Summe von my_vec. Was passiert und weshalb?
 
-# Plotte den Vektor x mit der plot() Funktion. Was ist passiert?
+# Der folgende Code erstellt eine Matrix "my_mat" mit den Werten 1 bis 10 in zwei
+# Spalten.
+my_mat <- matrix(1:10, ncol = 2)
 
-# Erstelle eine matrix mit zwei Spalten und den Werten von 1 bis 10. Nenne sie y
+# Überprüfe welche Klasse my_mat hat.
 
-# Überprüfe, ob y tatsächlich die Klasse Matrix hat
-
-# Berechne die Summe der Matrix
+# Berechne die Summe der Matrix.
 
 # Die sum() Funktion hat die Summe über alle Zellen der Matrix berechnet. Was wenn
 # wir nur die Summe pro Zeile wollen?
