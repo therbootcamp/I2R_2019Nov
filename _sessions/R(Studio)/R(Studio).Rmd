@@ -70,7 +70,7 @@ require(tidyverse)
 
 # Overview
 
-.pull-left45[
+.pull-left4[
 
 1. <high>R(Studio)</high><br>
 &nbsp;&nbsp;&nbsp;- Was ist R?<br>
@@ -84,10 +84,12 @@ require(tidyverse)
 
 ]
 
-.pull-right45[
+.pull-right5[
 
-
-
+<p align = "center">
+<img src="image/computing.png"><br>
+<font style="font-size:10px">from <a href="https://xkcd.com//">xkcd.com</a></font>
+</p>
 
 ]
 

@@ -1,0 +1,353 @@
+---
+title: "Assignments"
+author: "Einführung in die moderne Datenanalyse mit R<br>
+  <a href='https://therbootcamp.github.io'>
+    Basel R Bootcamp
+  </a>
+  <br>
+  <a href='https://therbootcamp.github.io/I2R_2019Nov/'>
+    <i class='fas fa-clock' style='font-size:.9em;'></i>
+  </a>&#8239; 
+  <a href='https://therbootcamp.github.io'>
+    <i class='fas fa-home' style='font-size:.9em;' ></i>
+  </a>&#8239;
+  <a href='mailto:therbootcamp@gmail.com'>
+    <i class='fas fa-envelope' style='font-size: .9em;'></i>
+  </a>&#8239;
+  <a href='https://www.linkedin.com/company/basel-r-bootcamp/'>
+    <i class='fab fa-linkedin' style='font-size: .9em;'></i>
+  </a>"
+date: "November 2019"
+output:
+  xaringan::moon_reader:
+    css: ["default", "baselrbootcamp.css"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9'
+---
+
+layout: true
+
+<div class="my-footer">
+  <span style="text-align:center">
+    <span> 
+      <img src="https://raw.githubusercontent.com/therbootcamp/therbootcamp.github.io/master/_sessions/_image/by-sa.png" height=14 style="vertical-align: middle"/>
+    </span>
+    <a href="https://therbootcamp.github.io/">
+      <span style="padding-left:82px"> 
+        <font color="#7E7E7E">
+          www.therbootcamp.com
+        </font>
+      </span>
+    </a>
+    <a href="https://therbootcamp.github.io/">
+      <font color="#7E7E7E">
+      Einführung in die moderne Datenanalyse mit R | November 2019
+      </font>
+    </a>
+    </span>
+  </div> 
+
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+# see: https://github.com/yihui/xaringan
+# install.packages("xaringan")
+# see: 
+# https://github.com/yihui/xaringan/wiki
+# https://github.com/gnab/remark/wiki/Markdown
+options(width=110)
+options(digits = 4)
+
+require(tidyverse)
+```
+
+
+
+# Overview
+
+.pull-left4[
+
+1. R(Studio)<br>
+2. <high>Assignments</high><br>
+&nbsp;&nbsp;&nbsp;Objekt <mono><-</mono> Funktion<br>
+&nbsp;&nbsp;&nbsp;<mono><-</mono> kreiert Objekte<br>
+&nbsp;&nbsp;&nbsp;<mono><-</mono> verändert Objekte<br>
+3. Funktionen<br>
+4. Data I/O<br>
+5. Analyse
+
+]
+
+.pull-right5[
+
+<p align = "center">
+<img src="image/goodcode.png" height=420px><br>
+<font style="font-size:10px">from <a href="https://xkcd.com//">xkcd.com</a></font>
+</p>
+
+]
+
+---
+
+# Objekt <mono><-</mono> Funktion
+
+.pull-left5[
+
+1. R(Studio)<br>
+2. Assignments<br>
+&nbsp;&nbsp;&nbsp;<high>Objekt <mono><-</mono> Funktion</high><br>
+&nbsp;&nbsp;&nbsp;<mono><-</mono> kreiert Objekte<br>
+&nbsp;&nbsp;&nbsp;<mono><-</mono> verändert Objekte<br>
+3. Funktionen<br>
+4. Data I/O<br>
+5. Analyse
+
+]
+
+.pull-right5[
+
+<p align="center">
+  <img src="image/assignment.png">
+</p>
+
+
+]
+
+---
+
+# <mono><-</mono> kreiert Objekte
+
+.pull-left5[
+
+1. R(Studio)<br>
+2. Assignments<br>
+&nbsp;&nbsp;&nbsp;Objekt <mono><-</mono> Funktion<br>
+&nbsp;&nbsp;&nbsp;<high><mono><-</mono> kreiert Objekte</high><br>
+&nbsp;&nbsp;&nbsp;<mono><-</mono> verändert Objekte<br>
+3. Funktionen<br>
+4. Data I/O<br>
+5. Analyse
+
+]
+
+.pull-right5[
+```{r}
+# ein Objekt names eins_zwei_drei
+eins_zwei_drei <- c(1, 2, 3)
+
+# Printe das Objekt
+print(eins_zwei_drei)
+
+# Printe das Objekt
+eins_zwei_drei
+
+```
+
+]
+
+---
+
+# <mono><-</mono> kreiert Objekte
+
+.pull-left5[
+
+1. R(Studio)<br>
+2. Assignments<br>
+&nbsp;&nbsp;&nbsp;Objekt <mono><-</mono> Funktion<br>
+&nbsp;&nbsp;&nbsp;<high><mono><-</mono> kreiert Objekte</high><br>
+&nbsp;&nbsp;&nbsp;<mono><-</mono> verändert Objekte<br>
+3. Funktionen<br>
+4. Data I/O<br>
+5. Analyse
+
+]
+
+.pull-right5[
+```{r}
+# ein Objekt names eins_zwei_drei
+eins_zwei_drei <- c(1, 2, 3)
+
+# Berechne den Mittelwert
+mean(eins_zwei_drei)
+```
+
+]
+
+---
+
+# <mono><-</mono> kreiert Objekte
+
+.pull-left5[
+
+1. R(Studio)<br>
+2. Assignments<br>
+&nbsp;&nbsp;&nbsp;Objekt <mono><-</mono> Funktion<br>
+&nbsp;&nbsp;&nbsp;<high><mono><-</mono> kreiert Objekte</high><br>
+&nbsp;&nbsp;&nbsp;<mono><-</mono> verändert Objekte<br>
+3. Funktionen<br>
+4. Data I/O<br>
+5. Analyse
+
+]
+
+.pull-right5[
+```{r}
+# ein Objekt names eins_zwei_drei
+eins_zwei_drei <- c(1, 2, 3)
+
+# Berechne den Mittelwert
+ergebnis <- mean(eins_zwei_drei)
+
+# Printe Ergebnis
+ergebnis
+```
+
+]
+
+---
+
+# <mono><-</mono> kreiert Objekte
+
+.pull-left5[
+
+1. R(Studio)<br>
+2. Assignments<br>
+&nbsp;&nbsp;&nbsp;Objekt <mono><-</mono> Funktion<br>
+&nbsp;&nbsp;&nbsp;<high><mono><-</mono> kreiert Objekte</high><br>
+&nbsp;&nbsp;&nbsp;<mono><-</mono> verändert Objekte<br>
+3. Funktionen<br>
+4. Data I/O<br>
+5. Analyse
+
+]
+
+.pull-right5[
+```{r}
+# ein Objekt names eins_zwei_drei
+eins_zwei_drei <- c(1, 2, 3)
+
+# Berechne den Mittelwert
+ergebnis <- mean(eins_zwei_drei)
+
+# Benutze Ergebnis
+ergebnis * 10
+```
+
+]
+
+
+---
+
+# <mono><-</mono> verändert Objekte
+
+.pull-left5[
+
+1. R(Studio)<br>
+2. Assignments<br>
+&nbsp;&nbsp;&nbsp;Objekt <mono><-</mono> Funktion<br>
+&nbsp;&nbsp;&nbsp;<mono><-</mono> kreiert Objekte<br>
+&nbsp;&nbsp;&nbsp;<high><mono><-</mono> verändert Objekte</high><br>
+3. Funktionen<br>
+4. Data I/O<br>
+5. Analyse
+
+]
+
+.pull-right5[
+```{r}
+# ein Objekt names eins_zwei_drei
+eins_zwei_drei <- c(1, 2, 3)
+
+# Printe das Objekt
+eins_zwei_drei
+
+# Printe das Objekt
+eins_zwei_drei + 100
+
+# Printe das Objekt
+eins_zwei_drei
+
+```
+
+]
+
+
+---
+
+# <mono><-</mono> verändert Objekte
+
+.pull-left5[
+
+1. R(Studio)<br>
+2. Assignments<br>
+&nbsp;&nbsp;&nbsp;Objekt <mono><-</mono> Funktion<br>
+&nbsp;&nbsp;&nbsp;<mono><-</mono> kreiert Objekte<br>
+&nbsp;&nbsp;&nbsp;<high><mono><-</mono> verändert Objekte</high><br>
+3. Funktionen<br>
+4. Data I/O<br>
+5. Analyse
+
+]
+
+.pull-right5[
+```{r}
+# ein Objekt names eins_zwei_drei
+eins_zwei_drei <- c(1, 2, 3)
+
+# Printe das Objekt
+eins_zwei_drei
+
+# Printe das Objekt
+eins_zwei_drei <- eins_zwei_drei + 100
+
+# Printe das Objekt
+eins_zwei_drei
+
+```
+
+]
+
+---
+
+# <mono><-</mono> verändert Objekte
+
+.pull-left5[
+
+1. R(Studio)<br>
+2. Assignments<br>
+&nbsp;&nbsp;&nbsp;Objekt <mono><-</mono> Funktion<br>
+&nbsp;&nbsp;&nbsp;<mono><-</mono> kreiert Objekte<br>
+&nbsp;&nbsp;&nbsp;<high><mono><-</mono> verändert Objekte</high><br>
+3. Funktionen<br>
+4. Data I/O<br>
+5. Analyse
+
+]
+
+.pull-right5[
+```{r}
+# ein Objekt names eins_zwei_drei
+eins_zwei_drei <- c(1, 2, 3)
+
+# Ergänze um weitere Zahl
+und_vier <- c(eins_zwei_drei, 4)
+
+# Printe das Objekt
+und_vier
+
+```
+
+]
+
+
+---
+
+class: middle, center
+
+<h1><a href="">Interactive</a></h1>
+
