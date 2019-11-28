@@ -1,5 +1,5 @@
 ---
-title: "Assignments"
+title: "Data IO"
 author: "Einführung in die moderne Datenanalyse mit R<br>
   <a href='https://therbootcamp.github.io'>
     Basel R Bootcamp
@@ -67,25 +67,24 @@ require(tidyverse)
 ```
 
 
-.pull-left4[
-
 # Agenda
 
+.pull-left4[
+
 1. R(Studio)<br>
-2. <high>Assignments</high><br>
-&nbsp;&nbsp;&nbsp;Objekt <mono><-</mono> Funktion<br>
-&nbsp;&nbsp;&nbsp;<mono><-</mono> kreiert Objekte<br>
-&nbsp;&nbsp;&nbsp;<mono><-</mono> verändert Objekte<br><br>
+2. Assignments<br>
 3. Funktionen<br>
-4. Data I/O<br>
+4. <high>Data I/O</high><br>
+&nbsp;&nbsp;&nbsp;-Daten von Festplatte lesen<br>
+&nbsp;&nbsp;&nbsp;-Daten leben in <mono>data.frames</mono><br>
+&nbsp;&nbsp;&nbsp;-Daten auf die Festplatte schreiben<br><br>
 5. Analyse
 
 ]
 
 .pull-right5[
-<br><br>
 <p align = "center">
-<img src="image/goodcode.png" height=500px><br>
+<img src="image/fixing.png"><br>
 <font style="font-size:10px">from <a href="https://xkcd.com//">xkcd.com</a></font>
 </p>
 
@@ -93,256 +92,383 @@ require(tidyverse)
 
 ---
 
-# Objekt <mono><-</mono> Funktion
+# Daten von Festplatte lesen
 
-.pull-left5[
+.pull-left4[
 
 1. R(Studio)<br>
 2. Assignments<br>
-&nbsp;&nbsp;&nbsp;<high>Objekt <mono><-</mono> Funktion</high><br>
-&nbsp;&nbsp;&nbsp;<mono><-</mono> kreiert Objekte<br>
-&nbsp;&nbsp;&nbsp;<mono><-</mono> verändert Objekte<br><br>
 3. Funktionen<br>
 4. Data I/O<br>
+&nbsp;&nbsp;&nbsp;-<high>Daten von Festplatte lesen</high><br>
+&nbsp;&nbsp;&nbsp;-Daten leben in <mono>data.frames</mono><br>
+&nbsp;&nbsp;&nbsp;-Daten auf die Festplatte schreiben<br><br>
 5. Analyse
 
 ]
 
 .pull-right5[
 
-<p align="center">
-  <img src="image/assignment.png">
+```{r, echo = F}
+options(max.print=50)
+```
+
+```{r}
+# Lese Daten ein
+read.csv('1_Data/Tourismus.csv')
+```
+]
+
+---
+
+# Daten von Festplatte lesen
+
+.pull-left4[
+
+1. R(Studio)<br>
+2. Assignments<br>
+3. Funktionen<br>
+4. Data I/O<br>
+&nbsp;&nbsp;&nbsp;-<high>Daten von Festplatte lesen</high><br>
+&nbsp;&nbsp;&nbsp;-Daten leben in <mono>data.frames</mono><br>
+&nbsp;&nbsp;&nbsp;-Daten auf die Festplatte schreiben<br><br>
+5. Analyse
+
+]
+
+.pull-right5[
+
+```{r, echo = F}
+options(max.print=50)
+```
+
+```{r}
+# Lese Daten in ein Objekt ein
+daten <- read.csv('1_Data/Tourismus.csv')
+
+# Printe Daten
+daten
+
+```
+]
+
+
+---
+
+# Daten von Festplatte lesen
+
+.pull-left4[
+
+1. R(Studio)<br>
+2. Assignments<br>
+3. Funktionen<br>
+4. Data I/O<br>
+&nbsp;&nbsp;&nbsp;-<high>Daten von Festplatte lesen</high><br>
+&nbsp;&nbsp;&nbsp;-Daten leben in <mono>data.frames</mono><br>
+&nbsp;&nbsp;&nbsp;-Daten auf die Festplatte schreiben<br><br>
+5. Analyse
+
+]
+
+.pull-right5[
+<p align = "center">
+<img src="image/autocompl1.png">
 </p>
 
-
 ]
 
 ---
 
-# <mono><-</mono> kreiert Objekte
+# Daten von Festplatte lesen
 
-.pull-left5[
+.pull-left4[
 
 1. R(Studio)<br>
 2. Assignments<br>
-&nbsp;&nbsp;&nbsp;Objekt <mono><-</mono> Funktion<br>
-&nbsp;&nbsp;&nbsp;<high><mono><-</mono> kreiert Objekte</high><br>
-&nbsp;&nbsp;&nbsp;<mono><-</mono> verändert Objekte<br><br>
 3. Funktionen<br>
 4. Data I/O<br>
+&nbsp;&nbsp;&nbsp;-<high>Daten von Festplatte lesen</high><br>
+&nbsp;&nbsp;&nbsp;-Daten leben in <mono>data.frames</mono><br>
+&nbsp;&nbsp;&nbsp;-Daten auf die Festplatte schreiben<br><br>
 5. Analyse
 
 ]
 
 .pull-right5[
-```{r}
-# ein Objekt names eins_zwei_drei
-eins_zwei_drei <- c(1, 2, 3)
-
-# Printe das Objekt
-print(eins_zwei_drei)
-
-# Printe das Objekt
-eins_zwei_drei
-
-```
-
-]
-
----
-
-# <mono><-</mono> kreiert Objekte
-
-.pull-left5[
-
-1. R(Studio)<br>
-2. Assignments<br>
-&nbsp;&nbsp;&nbsp;Objekt <mono><-</mono> Funktion<br>
-&nbsp;&nbsp;&nbsp;<high><mono><-</mono> kreiert Objekte</high><br>
-&nbsp;&nbsp;&nbsp;<mono><-</mono> verändert Objekte<br><br>
-3. Funktionen<br>
-4. Data I/O<br>
-5. Analyse
-
-]
-
-.pull-right5[
-```{r}
-# ein Objekt names eins_zwei_drei
-eins_zwei_drei <- c(1, 2, 3)
-
-# Berechne den Mittelwert
-mean(eins_zwei_drei)
-```
-
-]
-
----
-
-# <mono><-</mono> kreiert Objekte
-
-.pull-left5[
-
-1. R(Studio)<br>
-2. Assignments<br>
-&nbsp;&nbsp;&nbsp;Objekt <mono><-</mono> Funktion<br>
-&nbsp;&nbsp;&nbsp;<high><mono><-</mono> kreiert Objekte</high><br>
-&nbsp;&nbsp;&nbsp;<mono><-</mono> verändert Objekte<br><br>
-3. Funktionen<br>
-4. Data I/O<br>
-5. Analyse
-
-]
-
-.pull-right5[
-```{r}
-# ein Objekt names eins_zwei_drei
-eins_zwei_drei <- c(1, 2, 3)
-
-# Berechne den Mittelwert
-ergebnis <- mean(eins_zwei_drei)
-
-# Printe Ergebnis
-ergebnis
-```
-
-]
-
----
-
-# <mono><-</mono> kreiert Objekte
-
-.pull-left5[
-
-1. R(Studio)<br>
-2. Assignments<br>
-&nbsp;&nbsp;&nbsp;Objekt <mono><-</mono> Funktion<br>
-&nbsp;&nbsp;&nbsp;<high><mono><-</mono> kreiert Objekte</high><br>
-&nbsp;&nbsp;&nbsp;<mono><-</mono> verändert Objekte<br><br>
-3. Funktionen<br>
-4. Data I/O<br>
-5. Analyse
-
-]
-
-.pull-right5[
-```{r}
-# ein Objekt names eins_zwei_drei
-eins_zwei_drei <- c(1, 2, 3)
-
-# Berechne den Mittelwert
-ergebnis <- mean(eins_zwei_drei)
-
-# Benutze Ergebnis
-ergebnis * 10
-```
+<p align = "center">
+<img src="image/autocompl2a.png">
+</p>
 
 ]
 
 
 ---
 
-# <mono><-</mono> verändert Objekte
+# Daten von Festplatte lesen
 
-.pull-left5[
+.pull-left4[
 
 1. R(Studio)<br>
 2. Assignments<br>
-&nbsp;&nbsp;&nbsp;Objekt <mono><-</mono> Funktion<br>
-&nbsp;&nbsp;&nbsp;<mono><-</mono> kreiert Objekte<br>
-&nbsp;&nbsp;&nbsp;<high><mono><-</mono> verändert Objekte</high><br><br>
 3. Funktionen<br>
 4. Data I/O<br>
+&nbsp;&nbsp;&nbsp;-<high>Daten von Festplatte lesen</high><br>
+&nbsp;&nbsp;&nbsp;-Daten leben in <mono>data.frames</mono><br>
+&nbsp;&nbsp;&nbsp;-Daten auf die Festplatte schreiben<br><br>
 5. Analyse
 
 ]
 
 .pull-right5[
-```{r}
-# ein Objekt names eins_zwei_drei
-eins_zwei_drei <- c(1, 2, 3)
-
-# Printe das Objekt
-eins_zwei_drei
-
-# Printe das Objekt
-eins_zwei_drei + 100
-
-# Printe das Objekt
-eins_zwei_drei
-
-```
-
-]
-
-
----
-
-# <mono><-</mono> verändert Objekte
-
-.pull-left5[
-
-1. R(Studio)<br>
-2. Assignments<br>
-&nbsp;&nbsp;&nbsp;Objekt <mono><-</mono> Funktion<br>
-&nbsp;&nbsp;&nbsp;<mono><-</mono> kreiert Objekte<br>
-&nbsp;&nbsp;&nbsp;<high><mono><-</mono> verändert Objekte</high><br><br>
-3. Funktionen<br>
-4. Data I/O<br>
-5. Analyse
-
-]
-
-.pull-right5[
-```{r}
-# ein Objekt names eins_zwei_drei
-eins_zwei_drei <- c(1, 2, 3)
-
-# Printe das Objekt
-eins_zwei_drei
-
-# Printe das Objekt
-eins_zwei_drei <- eins_zwei_drei + 100
-
-# Printe das Objekt
-eins_zwei_drei
-
-```
+<p align = "center">
+<img src="image/autocompl2b.png">
+</p>
 
 ]
 
 ---
 
-# <mono><-</mono> verändert Objekte
+# Daten von Festplatte lesen
 
-.pull-left5[
+.pull-left4[
 
 1. R(Studio)<br>
 2. Assignments<br>
-&nbsp;&nbsp;&nbsp;Objekt <mono><-</mono> Funktion<br>
-&nbsp;&nbsp;&nbsp;<mono><-</mono> kreiert Objekte<br>
-&nbsp;&nbsp;&nbsp;<high><mono><-</mono> verändert Objekte</high><br><br>
 3. Funktionen<br>
 4. Data I/O<br>
+&nbsp;&nbsp;&nbsp;-Daten von Festplatte lesen<br>
+&nbsp;&nbsp;&nbsp;-<high>Daten leben in <mono>data.frames</mono></high><br>
+&nbsp;&nbsp;&nbsp;-Daten auf die Festplatte schreiben<br><br>
 5. Analyse
 
 ]
 
 .pull-right5[
+
+```{r, echo = F}
+options(max.print=20,width=40)
+```
+
 ```{r}
-# ein Objekt names eins_zwei_drei
-eins_zwei_drei <- c(1, 2, 3)
+# Lese Daten in ein Objekt ein
+daten <- read.csv('1_Data/Tourismus.csv')
 
-# Ergänze um weitere Zahl
-und_vier <- c(eins_zwei_drei, 4)
+# Klasse der Daten
+class(daten)
 
-# Printe das Objekt
-und_vier
+# Dimensionen der Daten
+dim(daten)
+
+# Namen der Variablen in den Daten
+names(daten)
 
 ```
+]
+
+
+---
+
+# Daten von Festplatte lesen
+
+.pull-left4[
+
+1. R(Studio)<br>
+2. Assignments<br>
+3. Funktionen<br>
+4. Data I/O<br>
+&nbsp;&nbsp;&nbsp;-Daten von Festplatte lesen<br>
+&nbsp;&nbsp;&nbsp;-<high>Daten leben in <mono>data.frames</mono></high><br>
+&nbsp;&nbsp;&nbsp;-Daten auf die Festplatte schreiben<br><br>
+5. Analyse
 
 ]
 
+.pull-right5[
+
+```{r, echo = F}
+options(max.print=20,width=40)
+```
+
+```{r}
+# Lese Daten in ein Objekt ein
+daten <- read.csv('1_Data/Tourismus.csv')
+
+# Klasse der Daten
+daten$Land
+
+```
+]
+
+---
+
+# Daten von Festplatte lesen
+
+.pull-left4[
+
+1. R(Studio)<br>
+2. Assignments<br>
+3. Funktionen<br>
+4. Data I/O<br>
+&nbsp;&nbsp;&nbsp;-Daten von Festplatte lesen<br>
+&nbsp;&nbsp;&nbsp;-<high>Daten leben in <mono>data.frames</mono></high><br>
+&nbsp;&nbsp;&nbsp;-Daten auf die Festplatte schreiben<br><br>
+5. Analyse
+
+]
+
+.pull-right5[
+
+```{r, echo = F}
+options(max.print=20,width=40)
+```
+
+```{r}
+# Lese Daten in ein Objekt ein
+daten <- read.csv('1_Data/Tourismus.csv')
+
+# Klasse der Daten
+class(daten$Land)
+
+```
+]
+
+---
+
+# Daten von Festplatte lesen
+
+.pull-left4[
+
+1. R(Studio)<br>
+2. Assignments<br>
+3. Funktionen<br>
+4. Data I/O<br>
+&nbsp;&nbsp;&nbsp;-Daten von Festplatte lesen<br>
+&nbsp;&nbsp;&nbsp;-<high>Daten leben in <mono>data.frames</mono></high><br>
+&nbsp;&nbsp;&nbsp;-Daten auf die Festplatte schreiben<br><br>
+5. Analyse
+
+]
+
+.pull-right5[
+
+```{r, echo = F}
+options(max.print=8,width=40)
+```
+
+```{r}
+# Lese Daten in ein Objekt ein
+daten <- read.csv('1_Data/Tourismus.csv',
+                  stringsAsFactors = FALSE)
+
+# Klasse der Daten
+class(daten$Land)
+
+# Klasse der Daten
+daten$Land
+
+```
+]
+
+
+---
+
+# Daten von Festplatte lesen
+
+.pull-left4[
+
+1. R(Studio)<br>
+2. Assignments<br>
+3. Funktionen<br>
+4. Data I/O<br>
+&nbsp;&nbsp;&nbsp;-Daten von Festplatte lesen<br>
+&nbsp;&nbsp;&nbsp;-<high>Daten leben in <mono>data.frames</mono></high><br>
+&nbsp;&nbsp;&nbsp;-Daten auf die Festplatte schreiben<br><br>
+5. Analyse
+
+]
+
+.pull-right5[
+
+```{r, echo = F}
+options(max.print=80,width=40)
+```
+
+```{r}
+# Lese Daten in ein Objekt ein
+daten <- read.csv('1_Data/Tourismus.csv')
+
+# Klasse der Daten
+daten$Dauer
+
+```
+]
+
+---
+
+# Daten von Festplatte lesen
+
+.pull-left4[
+
+1. R(Studio)<br>
+2. Assignments<br>
+3. Funktionen<br>
+4. Data I/O<br>
+&nbsp;&nbsp;&nbsp;-Daten von Festplatte lesen<br>
+&nbsp;&nbsp;&nbsp;-<high>Daten leben in <mono>data.frames</mono></high><br>
+&nbsp;&nbsp;&nbsp;-Daten auf die Festplatte schreiben<br><br>
+5. Analyse
+
+]
+
+.pull-right5[
+
+```{r, echo = F}
+options(max.print=80,width=40)
+```
+
+```{r}
+# Lese Daten in ein Objekt ein
+daten <- read.csv('1_Data/Tourismus.csv')
+
+# Klasse der Daten
+class(daten$Dauer)
+
+```
+]
+
+
+---
+
+# Daten von Festplatte lesen
+
+.pull-left4[
+
+1. R(Studio)<br>
+2. Assignments<br>
+3. Funktionen<br>
+4. Data I/O<br>
+&nbsp;&nbsp;&nbsp;-Daten von Festplatte lesen<br>
+&nbsp;&nbsp;&nbsp;-Daten leben in <mono>data.frames</mono><br>
+&nbsp;&nbsp;&nbsp;-<high>Daten auf die Festplatte schreiben</high><br><br>
+5. Analyse
+
+]
+
+.pull-right5[
+
+```{r, echo = F}
+options(max.print=80,width=40)
+```
+
+```{r}
+# Schreibe Daten auf die Festplatte als csv
+write.csv(daten, '1_Data/Tourismus_neu.csv')
+
+# Schreibe Daten auf die Festplatte als RDS
+saveRDS(daten, '1_Data/Tourismus_neu.RDS')
+
+```
+]
 
 ---
 
