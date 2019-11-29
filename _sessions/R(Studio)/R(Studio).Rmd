@@ -270,6 +270,15 @@ save workspace and history &#9679; set project specific options &#9679; access f
 
 ]
 
+
+---
+
+class: middle, center
+
+<h1><a href="https://raw.githubusercontent.com/therbootcamp/I2R_2019Nov/master/_download/code/I2R_code.zip" download>Download Code</a></h1>
+
+<h1><a href="https://raw.githubusercontent.com/therbootcamp/I2R_2019Nov/master/_download/data/I2R_data.zip" download>Download Daten</a></h1>
+
 ---
 
 class: middle, center
