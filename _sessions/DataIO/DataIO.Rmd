@@ -474,5 +474,5 @@ saveRDS(daten, '1_Data/Tourismus_neu.RDS')
 
 class: middle, center
 
-<h1><a href="https://therbootcamp.github.io/I2R_2019Nov/_sessions/DataIO/DataIO_Interactive.R">Interaktiv</a></h1>
+<h1><high>Interactive</high></h1>
 
