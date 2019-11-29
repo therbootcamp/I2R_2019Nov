@@ -293,7 +293,7 @@ options(max.print=20,width=40)
 # Lese Daten in ein Objekt ein
 daten <- read.csv('1_Data/Tourismus.csv')
 
-# Klasse der Daten
+# Extrahiere Land mit $
 daten$Land
 
 ```
@@ -326,7 +326,7 @@ options(max.print=20,width=40)
 # Lese Daten in ein Objekt ein
 daten <- read.csv('1_Data/Tourismus.csv')
 
-# Klasse der Daten
+# Klasse der Land Variable
 class(daten$Land)
 
 ```
@@ -360,10 +360,10 @@ options(max.print=8,width=40)
 daten <- read.csv('1_Data/Tourismus.csv',
                   stringsAsFactors = FALSE)
 
-# Klasse der Daten
+# Klasse der Land Variable
 class(daten$Land)
 
-# Klasse der Daten
+# Extrahiere Land mit $
 daten$Land
 
 ```
@@ -397,7 +397,7 @@ options(max.print=80,width=40)
 # Lese Daten in ein Objekt ein
 daten <- read.csv('1_Data/Tourismus.csv')
 
-# Klasse der Daten
+# Extrahiere Dauer mit $
 daten$Dauer
 
 ```
@@ -430,7 +430,7 @@ options(max.print=80,width=40)
 # Lese Daten in ein Objekt ein
 daten <- read.csv('1_Data/Tourismus.csv')
 
-# Klasse der Daten
+# Extrahiere Dauer mit $
 class(daten$Dauer)
 
 ```
