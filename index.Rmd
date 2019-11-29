@@ -40,7 +40,7 @@ output:
 |:--|:----------------------|
 |0| Willkommen!: [Willkommen!](_sessions/Willkommen/Willkommen.html) | 
 |1| Warum R: [slides](_sessions/WarumR/WarumR.html)|
-|2| R(Studio) [slides](_sessions/R(Studio)/R_Studio_.html) |
+|2| R(Studio): [slides](_sessions/R(Studio)/R_Studio_.html) |
 |3| Assignments: [slides](_sessions/Assignments/Assignments.html), [interactive](_sessions/Assignments/Assignments_interactive.R) |
 |4| Funktionen: [slides](_sessions/Funktionen/Funktionen.html),   [interactive](_sessions/Funktionen/Funktionen_interactive.R) |
 |5| Daten I/O: [slides](_sessions/DataIO/DataIO.html), [interactive](_sessions/DataIO/DataIO_interactive.R) |
