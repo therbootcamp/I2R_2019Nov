@@ -143,7 +143,7 @@ R wurde 1993 von Ross Ihaka und Robert Gentlemen auf Basis der Programmiersprach
 
 .pull-right5[
 
-Eine Programmiersprache ist eine **formale Sprache** die eine Reihe Instruktionen für verschiedenste Ziele spezifiziert. Programmiersprachen bestehen aus **instructionen für einen Computer** und werden genutzt werden um **Algorithmen zu implementieren**.
+Eine Programmiersprache ist eine **formale Sprache** die eine Reihe Instruktionen für verschiedenste Ziele spezifiziert. Programmiersprachen bestehen aus **instruktionen für einen Computer** und werden genutzt um **Algorithmen zu implementieren**.
 
 <u>Algorithmus in Worten</u>
 1. Load data

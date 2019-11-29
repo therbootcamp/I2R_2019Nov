@@ -136,7 +136,7 @@ require(tidyverse)
 
 .pull-right5[
 ```{r}
-# ein Objekt names eins_zwei_drei
+# ein Objekt namens eins_zwei_drei
 eins_zwei_drei <- c(1, 2, 3)
 
 # Printe das Objekt
@@ -168,7 +168,7 @@ eins_zwei_drei
 
 .pull-right5[
 ```{r}
-# ein Objekt names eins_zwei_drei
+# ein Objekt namens eins_zwei_drei
 eins_zwei_drei <- c(1, 2, 3)
 
 # Berechne den Mittelwert
@@ -196,7 +196,7 @@ mean(eins_zwei_drei)
 
 .pull-right5[
 ```{r}
-# ein Objekt names eins_zwei_drei
+# ein Objekt namens eins_zwei_drei
 eins_zwei_drei <- c(1, 2, 3)
 
 # Berechne den Mittelwert
@@ -227,7 +227,7 @@ ergebnis
 
 .pull-right5[
 ```{r}
-# ein Objekt names eins_zwei_drei
+# ein Objekt namens eins_zwei_drei
 eins_zwei_drei <- c(1, 2, 3)
 
 # Berechne den Mittelwert
@@ -259,7 +259,7 @@ ergebnis * 10
 
 .pull-right5[
 ```{r}
-# ein Objekt names eins_zwei_drei
+# ein Objekt namens eins_zwei_drei
 eins_zwei_drei <- c(1, 2, 3)
 
 # Printe das Objekt
@@ -295,7 +295,7 @@ eins_zwei_drei
 
 .pull-right5[
 ```{r}
-# ein Objekt names eins_zwei_drei
+# ein Objekt namens eins_zwei_drei
 eins_zwei_drei <- c(1, 2, 3)
 
 # Printe das Objekt
@@ -330,7 +330,7 @@ eins_zwei_drei
 
 .pull-right5[
 ```{r}
-# ein Objekt names eins_zwei_drei
+# ein Objekt namens eins_zwei_drei
 eins_zwei_drei <- c(1, 2, 3)
 
 # Ergänze um weitere Zahl

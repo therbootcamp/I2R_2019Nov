@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
   <head>
-    <title>Assignments</title>
+    <title>R(Studio)</title>
     <meta charset="utf-8" />
     <meta name="author" content="Einführung in die moderne Datenanalyse mit R   Basel R Bootcamp" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
@@ -11,7 +11,7 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Assignments
+# R(Studio)
 ### Einführung in die moderne Datenanalyse mit R<br> <a href='https://therbootcamp.github.io'> Basel R Bootcamp </a> <br> <a href='https://therbootcamp.github.io/I2R_2019Nov/'> <i class='fas fa-clock' style='font-size:.9em;'></i> </a>  <a href='https://therbootcamp.github.io'> <i class='fas fa-home' style='font-size:.9em;' ></i> </a>  <a href='mailto:therbootcamp@gmail.com'> <i class='fas fa-envelope' style='font-size: .9em;'></i> </a>  <a href='https://www.linkedin.com/company/basel-r-bootcamp/'> <i class='fab fa-linkedin' style='font-size: .9em;'></i> </a>
 ### November 2019
 
@@ -45,15 +45,17 @@ layout: true
 
 
 
-.pull-left4[
 
 # Agenda
 
-1. R(Studio)&lt;br&gt;
-2. &lt;high&gt;Assignments&lt;/high&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte&lt;br&gt;&lt;br&gt;
+.pull-left4[
+
+1. &lt;high&gt;R(Studio)&lt;/high&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- Was ist R?&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- Was sind Programmiersprachen?&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- Was ist RStudio?&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- Warum RStudio?&lt;br&gt;&lt;br&gt;
+2. Assignments&lt;br&gt;
 3. Funktionen&lt;br&gt;
 4. Data I/O&lt;br&gt;
 5. Analyse
@@ -61,9 +63,9 @@ layout: true
 ]
 
 .pull-right5[
-&lt;br&gt;&lt;br&gt;
+
 &lt;p align = "center"&gt;
-&lt;img src="image/goodcode.png" height=500px&gt;&lt;br&gt;
+&lt;img src="image/computing.png"&gt;&lt;br&gt;
 &lt;font style="font-size:10px"&gt;from &lt;a href="https://xkcd.com//"&gt;xkcd.com&lt;/a&gt;&lt;/font&gt;
 &lt;/p&gt;
 
@@ -71,15 +73,16 @@ layout: true
 
 ---
 
-# Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion
+# Was ist R
 
-.pull-left5[
+.pull-left4[
 
 1. R(Studio)&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- &lt;high&gt;Was ist R?&lt;/high&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- Was sind Programmiersprachen?&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- Was ist RStudio?&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- Warum RStudio?&lt;br&gt;&lt;br&gt;
 2. Assignments&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;high&gt;Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion&lt;/high&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte&lt;br&gt;&lt;br&gt;
 3. Funktionen&lt;br&gt;
 4. Data I/O&lt;br&gt;
 5. Analyse
@@ -88,24 +91,90 @@ layout: true
 
 .pull-right5[
 
-&lt;p align="center"&gt;
-  &lt;img src="image/assignment.png"&gt;
+R is eine **open-source Programmiersprache** für **statistische Berechnungen und Graphiken** die von der **R Foundation for Statistical Computing** supported wird. R wird **stark von Statistkern und Datenanalysten** für die Entwicklung von statistischer Software und Datenanalyse verwendet. 
+
+Der code der R unterliegt ist hauptsächlich in **C, Fortran, and R** geschrieben. R ist unter der GNU General Public License frei verfügbar, und es existieren Installationen für alle üblichen Systeme. Währed R für sich nur ein **command line interface** besitzt, exisistieren verschiedene **graphische Nutzerinterfaces**.
+
+R wurde 1993 von Ross Ihaka und Robert Gentlemen auf Basis der Programmiersprache S entwickelt.  
+
+&lt;font style="font-size:12px"&gt;Adapted from &lt;a href="https://en.wikipedia.org/wiki/Statistical_model"&gt;Wikipedia&lt;/a&gt; (emphasis added)&lt;/font&gt;
+
+]
+
+---
+
+# Was ist eine Programmiersprache
+
+.pull-left4[
+
+1. R(Studio)&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- Was ist R?&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- &lt;high&gt;Was sind Programmiersprachen?&lt;/high&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- Was ist RStudio?&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- Warum RStudio?&lt;br&gt;&lt;br&gt;
+2. Assignments&lt;br&gt;
+3. Funktionen&lt;br&gt;
+4. Data I/O&lt;br&gt;
+5. Analyse
+
+]
+
+.pull-right5[
+
+Eine Programmiersprache ist eine **formale Sprache** die eine Reihe Instruktionen für verschiedenste Ziele spezifiziert. Programmiersprachen bestehen aus **instruktionen für einen Computer** und werden genutzt um **Algorithmen zu implementieren**.
+
+&lt;u&gt;Algorithmus in Worten&lt;/u&gt;
+1. Load data
+2. Extract variables
+3. Run analysis
+4. Print result
+
+&lt;u&gt;Algorithmus in R&lt;/u&gt;
+&lt;mono&gt;data &lt;- read.table(link)&lt;br&gt;
+vars &lt;- data[,c('group','values')]&lt;br&gt;
+res &lt;- lm(variable ~ group, data = vars)&lt;br&gt;
+summary(analysis)&lt;br&gt;
+&lt;/mono&gt;
+]
+
+---
+
+# Was ist RStdudio
+
+.pull-left4[
+
+1. R(Studio)&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- Was ist R?&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- Was sind Programmiersprachen?&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- &lt;high&gt;Was ist RStudio?&lt;/high&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- Warum RStudio?&lt;br&gt;&lt;br&gt;
+2. Assignments&lt;br&gt;
+3. Funktionen&lt;br&gt;
+4. Data I/O&lt;br&gt;
+5. Analyse
+
+]
+
+.pull-right5[
+
+&lt;p align = "center"&gt;
+  &lt;img src="image/rstudio.png" height = 350px&gt;
 &lt;/p&gt;
 
-
 ]
 
 ---
 
-# &lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte
+# Warum RStudio?
 
-.pull-left5[
+.pull-left4[
 
 1. R(Studio)&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- Was ist R?&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- Was sind Programmiersprachen?&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- Was ist RStudio?&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- &lt;high&gt;Warum RStudio?&lt;/high&gt;&lt;br&gt;&lt;br&gt;
 2. Assignments&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;high&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte&lt;/high&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte&lt;br&gt;&lt;br&gt;
 3. Funktionen&lt;br&gt;
 4. Data I/O&lt;br&gt;
 5. Analyse
@@ -114,40 +183,27 @@ layout: true
 
 .pull-right5[
 
-```r
-# ein Objekt namens eins_zwei_drei
-eins_zwei_drei &lt;- c(1, 2, 3)
-
-# Printe das Objekt
-print(eins_zwei_drei)
-```
-
-```
-## [1] 1 2 3
-```
-
-```r
-# Printe das Objekt
-eins_zwei_drei
-```
-
-```
-## [1] 1 2 3
-```
+&lt;p align = "left"&gt;
+  &lt;img src="image/editor_edit.png"&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+Shortcut to &lt;high&gt;send to console&lt;/high&gt;:&lt;br&gt;&lt;br2&gt;&lt;font size = 6&gt;&amp;#8984;/ctrl + &amp;#9166;&lt;/font&gt;&lt;br&gt;&lt;br2&gt;&lt;br2&gt;
+Shortcut to &lt;high&gt;rerun chunk&lt;/high&gt;:&lt;br&gt;&lt;br2&gt;&lt;font size = 6&gt;  &amp;#8984;/ctrl + &amp;#8679; + p&lt;/font&gt;
+&lt;/p&gt;
 
 ]
 
 ---
 
-# &lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte
+# Warum RStudio?
 
-.pull-left5[
+.pull-left4[
 
 1. R(Studio)&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- Was ist R?&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- Was sind Programmiersprachen?&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- Was ist RStudio?&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- &lt;high&gt;Warum RStudio?&lt;/high&gt;&lt;br&gt;&lt;br&gt;
 2. Assignments&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;high&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte&lt;/high&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte&lt;br&gt;&lt;br&gt;
 3. Funktionen&lt;br&gt;
 4. Data I/O&lt;br&gt;
 5. Analyse
@@ -156,31 +212,25 @@ eins_zwei_drei
 
 .pull-right5[
 
-```r
-# ein Objekt namens eins_zwei_drei
-eins_zwei_drei &lt;- c(1, 2, 3)
-
-# Berechne den Mittelwert
-mean(eins_zwei_drei)
-```
-
-```
-## [1] 2
-```
+&lt;p align = "center"&gt;
+  &lt;img src="image/auto_complete_1.png"&gt;
+&lt;/p&gt;
 
 ]
 
+
 ---
 
-# &lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte
+# Warum RStudio?
 
-.pull-left5[
+.pull-left4[
 
 1. R(Studio)&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- Was ist R?&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- Was sind Programmiersprachen?&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- Was ist RStudio?&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;- &lt;high&gt;Warum RStudio?&lt;/high&gt;&lt;br&gt;&lt;br&gt;
 2. Assignments&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;high&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte&lt;/high&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte&lt;br&gt;&lt;br&gt;
 3. Funktionen&lt;br&gt;
 4. Data I/O&lt;br&gt;
 5. Analyse
@@ -189,199 +239,20 @@ mean(eins_zwei_drei)
 
 .pull-right5[
 
-```r
-# ein Objekt namens eins_zwei_drei
-eins_zwei_drei &lt;- c(1, 2, 3)
-
-# Berechne den Mittelwert
-ergebnis &lt;- mean(eins_zwei_drei)
-
-# Printe Ergebnis
-ergebnis
-```
-
-```
-## [1] 2
-```
+&lt;b&gt;Projects help with...&lt;/b&gt;&lt;br&gt;
+save workspace and history &amp;#9679; set project specific options &amp;#9679; access files &amp;#9679; version control &amp;#9679; etc.
+&lt;br&gt;&lt;br&gt;
+&lt;p align = "left"&gt;
+  &lt;img src="image/folder_structure.png"&gt;
+&lt;/p&gt;
 
 ]
-
----
-
-# &lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte
-
-.pull-left5[
-
-1. R(Studio)&lt;br&gt;
-2. Assignments&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;high&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte&lt;/high&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte&lt;br&gt;&lt;br&gt;
-3. Funktionen&lt;br&gt;
-4. Data I/O&lt;br&gt;
-5. Analyse
-
-]
-
-.pull-right5[
-
-```r
-# ein Objekt namens eins_zwei_drei
-eins_zwei_drei &lt;- c(1, 2, 3)
-
-# Berechne den Mittelwert
-ergebnis &lt;- mean(eins_zwei_drei)
-
-# Benutze Ergebnis
-ergebnis * 10
-```
-
-```
-## [1] 20
-```
-
-]
-
-
----
-
-# &lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte
-
-.pull-left5[
-
-1. R(Studio)&lt;br&gt;
-2. Assignments&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;high&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte&lt;/high&gt;&lt;br&gt;&lt;br&gt;
-3. Funktionen&lt;br&gt;
-4. Data I/O&lt;br&gt;
-5. Analyse
-
-]
-
-.pull-right5[
-
-```r
-# ein Objekt namens eins_zwei_drei
-eins_zwei_drei &lt;- c(1, 2, 3)
-
-# Printe das Objekt
-eins_zwei_drei
-```
-
-```
-## [1] 1 2 3
-```
-
-```r
-# Printe das Objekt
-eins_zwei_drei + 100
-```
-
-```
-## [1] 101 102 103
-```
-
-```r
-# Printe das Objekt
-eins_zwei_drei
-```
-
-```
-## [1] 1 2 3
-```
-
-]
-
-
----
-
-# &lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte
-
-.pull-left5[
-
-1. R(Studio)&lt;br&gt;
-2. Assignments&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;high&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte&lt;/high&gt;&lt;br&gt;&lt;br&gt;
-3. Funktionen&lt;br&gt;
-4. Data I/O&lt;br&gt;
-5. Analyse
-
-]
-
-.pull-right5[
-
-```r
-# ein Objekt namens eins_zwei_drei
-eins_zwei_drei &lt;- c(1, 2, 3)
-
-# Printe das Objekt
-eins_zwei_drei
-```
-
-```
-## [1] 1 2 3
-```
-
-```r
-# Printe das Objekt
-eins_zwei_drei &lt;- eins_zwei_drei + 100
-
-# Printe das Objekt
-eins_zwei_drei
-```
-
-```
-## [1] 101 102 103
-```
-
-]
-
----
-
-# &lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte
-
-.pull-left5[
-
-1. R(Studio)&lt;br&gt;
-2. Assignments&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;Objekt &lt;mono&gt;&lt;-&lt;/mono&gt; Funktion&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;mono&gt;&lt;-&lt;/mono&gt; kreiert Objekte&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;high&gt;&lt;mono&gt;&lt;-&lt;/mono&gt; verändert Objekte&lt;/high&gt;&lt;br&gt;&lt;br&gt;
-3. Funktionen&lt;br&gt;
-4. Data I/O&lt;br&gt;
-5. Analyse
-
-]
-
-.pull-right5[
-
-```r
-# ein Objekt namens eins_zwei_drei
-eins_zwei_drei &lt;- c(1, 2, 3)
-
-# Ergänze um weitere Zahl
-und_vier &lt;- c(eins_zwei_drei, 4)
-
-# Printe das Objekt
-und_vier
-```
-
-```
-## [1] 1 2 3 4
-```
-
-]
-
 
 ---
 
 class: middle, center
 
-&lt;h1&gt;&lt;a href="https://therbootcamp.github.io/I2R_2019Nov/_sessions/Assignments/Assignments_Interactive.R"&gt;Interaktiv&lt;/a&gt;&lt;/h1&gt;
+&lt;h1&gt;&lt;a href=""&gt;Interaktiv&lt;/a&gt;&lt;/h1&gt;
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
