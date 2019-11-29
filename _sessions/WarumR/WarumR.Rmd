@@ -318,7 +318,7 @@ Financial times, July 2018
 
 <p align = "center">
   <img src="image/indeed2019.png" height = 400px><br>
-  <font style="font-size:10px">from <a href="http://r4stats.com/articles/popularity/">http://r4stats.com/articles/popularity/</a></font>
+  <font style="font-size:10px">from <a href="http://r4stats.com/articles/popularity/">r4stats.com</a></font>
 </p>
 
 ]
@@ -326,7 +326,7 @@ Financial times, July 2018
 .pull-right45[
 <p align = "center">
   <img src="image/indeed2019change.png" height = 400px><br>
-  <font style="font-size:10px">from <a href="http://r4stats.com/articles/popularity/">http://r4stats.com/articles/popularity/</a></font>
+  <font style="font-size:10px">from <a href="http://r4stats.com/articles/popularity/">r4stats.com</a></font>
 </p>
 
 ]
@@ -346,9 +346,6 @@ Financial times, July 2018
   </td>
   </td>
   <td style="padding:10px;text-align: center">
-  <font style="font-size:20px"><b>Für wen?</b></font>
-  </td>
-  <td style="padding:10px;text-align: center">
   <font style="font-size:20px"><b>Entwickelt für</b></font>
   </td>
   <td style="padding:10px;text-align: center">
@@ -356,6 +353,9 @@ Financial times, July 2018
   </td>
   <td style="padding:10px;text-align: center">
   <font style="font-size:20px"><b>Umgebung</b></font>
+  </td>
+  <td style="padding:10px;text-align: center">
+  <font style="font-size:20px"><b>Für wen?</b></font>
   </td>
   </tr>
 <tr style="padding:20px;background-color:white">
@@ -366,9 +366,6 @@ Financial times, July 2018
   Wissenschaftlern, Statistikern und Analysten
   </td>
   <td style="padding:10px;text-align: center">
-  Programmier Einsteiger
-  </td>
-  <td style="padding:10px;text-align: center">
   Datenanalyse
   </td>
   <td style="padding:10px;text-align: center">
@@ -376,6 +373,9 @@ Financial times, July 2018
   </td>
   <td style="padding:10px;text-align: center">
   RStudio
+  </td>
+  <td style="padding:10px;text-align: center">
+  Programmier Einsteiger
   </td>
   </tr>
 <tr style="padding:20px;background-color:white">
@@ -386,9 +386,6 @@ Financial times, July 2018
   Softwareentwickler und Programmierer
   </td>
   <td style="padding:10px;text-align: center">
-  Erfahrene Programmierer
-  </td>
-  <td style="padding:10px;text-align: center">
   Systemprogrammierung
   </td>
   <td style="padding:10px;text-align: center">
@@ -396,6 +393,9 @@ Financial times, July 2018
   </td>
   <td style="padding:10px;text-align: center">
   Jupyter Notebooks
+  </td>
+  <td style="padding:10px;text-align: center">
+  Erfahrene Programmierer
   </td>
   </tr>
 </table>

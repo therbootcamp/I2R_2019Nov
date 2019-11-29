@@ -38,7 +38,7 @@ output:
 
 |  | Sessions | 
 |:--|:----------------------|
-|0| Wilkommen!: [Wilkommen!](_sessions/Wilkommen/Wilkommen.html) | 
+|0| Wilkommen!: [Wilkommen!](_sessions/Willkommen/Willkommen.html) | 
 |1| Warum R: [slides](_sessions/WarumR/WarumR.html)|
 |2| R(Studio) [slides](_sessions/R(Studio)/R(Studio).html) |
 |3| Assignments: [slides](_sessions/Assignments/Assignments.html), [interactive](_sessions/Assignments/Assignments_interactive.R) |
