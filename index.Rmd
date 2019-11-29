@@ -45,7 +45,7 @@ output:
 |4| Funktionen: [slides](_sessions/Funktionen/Funktionen.html),   [interactive](_sessions/Funktionen/Funktionen_interactive.R) |
 |5| Daten I/O: [slides](_sessions/DataIO/DataIO.html), [interactive](_sessions/DataIO/DataIO_interactive.R) |
 |6| Analyse: [slides](_sessions/Analyse/Analyse.html), [interactive](_sessions/Analyse/Analyse_interactive.R) |
-|7| Nächste Schritte: [slides](_sessions/NächsteSchritte/NächsteSchritte.html),     [interactive](_sessions/NächsteSchritte/NächsteSchritte_interactive.R) |
+|7| Nächste Schritte: [slides](_sessions/NächsteSchritte/NächsteSchritte.html) |
 
 <br>
 
