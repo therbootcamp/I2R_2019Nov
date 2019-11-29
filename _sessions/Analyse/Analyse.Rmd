@@ -302,7 +302,7 @@ options(max.print=80,width=40)
 ```
 
 ```{r, fig.height=5, fig.width=7, dpi=300}
-# Graphik Dauer
+# Histogramm Dauer
 hist(daten$Dauer)
 
 ```
@@ -330,7 +330,7 @@ options(max.print=80,width=40)
 ```
 
 ```{r, fig.height=5, fig.width=7, dpi=300}
-# Graphik Dauer
+# Histogramm Besucher
 hist(daten$Besucher)
 
 ```
@@ -358,7 +358,7 @@ options(max.print=80,width=40)
 ```
 
 ```{r, fig.height=5, fig.width=7, dpi=300}
-# Graphik Dauer
+# Streudiagram Besucher x Dauer
 plot(daten$Besucher, daten$Dauer)
 
 ```
@@ -386,7 +386,7 @@ options(max.print=80,width=40)
 ```
 
 ```{r, fig.height=5, fig.width=7, dpi=300}
-# Graphik Dauer
+# Streudiagram Besucher x Dauer
 plot(daten$Besucher, daten$Dauer,
      log = "xy")
 
@@ -415,9 +415,10 @@ options(max.print=80,width=40)
 ```
 
 ```{r, fig.height=5, fig.width=7, dpi=300}
-# Graphik Dauer
+# Streudiagram Besucher x Dauer
 plot(daten$Besucher, daten$Dauer,
-     log = "xy", col = 'red', pch = 16)
+     log = "xy", col = 'red', pch = 16,
+     xlab = 'Besucher', ylab = 'Dauer')
 
 ```
 ]
@@ -444,7 +445,7 @@ options(max.print=80,width=40)
 ```
 
 ```{r, fig.height=5, fig.width=7, dpi=300}
-# Graphik Dauer
+# Boxplot Dauer nach Region
 boxplot(daten$Dauer ~ daten$Region,
         log="y")
 ```
@@ -472,7 +473,7 @@ options(max.print=80,width=40)
 ```
 
 ```{r, fig.height=5, fig.width=7, dpi=300}
-# Graphik Dauer
+# Boxplot Besucher nach Region
 boxplot(daten$Besucher ~ daten$Region,
         log="y")
 ```

@@ -337,7 +337,7 @@ anova(lm(daten$Besucher ~ daten$Region))
 
 
 ```r
-# Graphik Dauer
+# Histogramm Dauer
 hist(daten$Dauer)
 ```
 
@@ -365,7 +365,7 @@ hist(daten$Dauer)
 
 
 ```r
-# Graphik Dauer
+# Histogramm Besucher
 hist(daten$Besucher)
 ```
 
@@ -393,7 +393,7 @@ hist(daten$Besucher)
 
 
 ```r
-# Graphik Dauer
+# Streudiagram Besucher x Dauer
 plot(daten$Besucher, daten$Dauer)
 ```
 
@@ -421,7 +421,7 @@ plot(daten$Besucher, daten$Dauer)
 
 
 ```r
-# Graphik Dauer
+# Streudiagram Besucher x Dauer
 plot(daten$Besucher, daten$Dauer,
      log = "xy")
 ```
@@ -450,9 +450,10 @@ plot(daten$Besucher, daten$Dauer,
 
 
 ```r
-# Graphik Dauer
+# Streudiagram Besucher x Dauer
 plot(daten$Besucher, daten$Dauer,
-     log = "xy", col = 'red', pch = 16)
+     log = "xy", col = 'red', pch = 16,
+     xlab = 'Besucher', ylab = 'Dauer')
 ```
 
 ![](Analyse_files/figure-html/unnamed-chunk-22-1.png)&lt;!-- --&gt;
@@ -479,7 +480,7 @@ plot(daten$Besucher, daten$Dauer,
 
 
 ```r
-# Graphik Dauer
+# Boxplot Dauer nach Region
 boxplot(daten$Dauer ~ daten$Region,
         log="y")
 ```
@@ -508,7 +509,7 @@ boxplot(daten$Dauer ~ daten$Region,
 
 
 ```r
-# Graphik Dauer
+# Boxplot Besucher nach Region
 boxplot(daten$Besucher ~ daten$Region,
         log="y")
 ```
