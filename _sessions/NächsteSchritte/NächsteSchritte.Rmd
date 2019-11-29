@@ -891,7 +891,8 @@ Das Netz ist vll. der beste Ort für Informationen über R.
 
 .pull-right45[
 
-<p align="center"><br><br><iframe src="https://docs.google.com/forms/d/e/1FAIpQLScz5sd7Otys8BXmKLZn0OPxyr1Tw6ilWSQgxm6Zr6q48TD66g/viewform?embedded=true" width="430" height="550">Wird geladen...</iframe></p>
+<p align="center"><br><br>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScz5sd7Otys8BXmKLZn0OPxyr1Tw6ilWSQgxm6Zr6q48TD66g/viewform?embedded=true" width="430" height="550" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></p>
 
 
 ]
