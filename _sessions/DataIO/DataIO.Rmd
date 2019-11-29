@@ -474,7 +474,7 @@ saveRDS(daten, '1_Data/Tourismus_neu.RDS')
 
 class: middle, center
 
-<h1><a href="https://raw.githubusercontent.com/therbootcamp/I2R_2019Nov/_sessions/DataIO/1_Data/Tourismus.csv">Download</a></h1>
+<h1><a href="https://raw.githubusercontent.com/therbootcamp/I2R_2019Nov/master/_sessions/DataIO/1_Data/Tourismus.csv" download>Download</a></h1>
 
 
 ---
