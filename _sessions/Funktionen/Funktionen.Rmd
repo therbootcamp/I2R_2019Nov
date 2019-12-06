@@ -314,5 +314,5 @@ library(tidyverse)
 
 class: middle, center
 
-<h1><a>Interactive</a></h1>
+<h1><high>Interactive</high></h1>
 

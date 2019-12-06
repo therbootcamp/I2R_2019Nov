@@ -348,4 +348,4 @@ und_vier
 
 class: middle, center
 
-<h1><a href="https://therbootcamp.github.io/I2R_2019Nov/_sessions/Assignments/Assignments_Interactive.R">Interaktiv</a></h1>
+<h1><high>Interactive</high></h1>

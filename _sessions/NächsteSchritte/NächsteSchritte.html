@@ -127,7 +127,7 @@ ggplot(data = tour,
 
 .pull-right45[
 
-![](NächsteSchritte_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
+![](NächsteSchritte_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
 
 ]
 
@@ -161,7 +161,7 @@ ggplot(data = tour,
 
 .pull-right45[
 
-![](NächsteSchritte_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
+![](NächsteSchritte_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
 
 ]
 
@@ -197,7 +197,7 @@ ggplot(data = tour,
 
 .pull-right45[
 
-![](NächsteSchritte_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
+![](NächsteSchritte_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
 
 ]
 
@@ -317,7 +317,7 @@ tour %&gt;%
 
 .pull-right45[
 
-![](NächsteSchritte_files/figure-html/unnamed-chunk-13-1.png)&lt;!-- --&gt;
+![](NächsteSchritte_files/figure-html/unnamed-chunk-13-1.png)&lt;!-- --&gt;
 
 ]
 
@@ -401,7 +401,7 @@ wordcloud(counts$word,
 
 .pull-right4[
 
-![](NächsteSchritte_files/figure-html/unnamed-chunk-18-1.png)&lt;!-- --&gt;
+![](NächsteSchritte_files/figure-html/unnamed-chunk-18-1.png)&lt;!-- --&gt;
 
 ]
 
@@ -495,7 +495,7 @@ rpart(
 
 &lt;br&gt;&lt;br&gt;
 
-![](NächsteSchritte_files/figure-html/unnamed-chunk-24-1.png)&lt;!-- --&gt;
+![](NächsteSchritte_files/figure-html/unnamed-chunk-24-1.png)&lt;!-- --&gt;
 
 ]
 ---
@@ -773,7 +773,8 @@ Das Netz ist vll. der beste Ort für Informationen über R.
 
 .pull-right45[
 
-&lt;p align="center"&gt;&lt;br&gt;&lt;br&gt;&lt;iframe src="https://docs.google.com/forms/d/e/1FAIpQLScz5sd7Otys8BXmKLZn0OPxyr1Tw6ilWSQgxm6Zr6q48TD66g/viewform?embedded=true" width="430" height="550"&gt;Wird geladen...&lt;/iframe&gt;&lt;/p&gt;
+&lt;p align="center"&gt;&lt;br&gt;&lt;br&gt;
+&lt;iframe src="https://docs.google.com/forms/d/e/1FAIpQLScz5sd7Otys8BXmKLZn0OPxyr1Tw6ilWSQgxm6Zr6q48TD66g/viewform?embedded=true" width="430" height="550" frameborder="0" marginheight="0" marginwidth="0"&gt;Loading…&lt;/iframe&gt;&lt;/p&gt;
 
 
 ]
@@ -829,7 +830,24 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
     deleted = true;
   });
-})();</script>
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
 
 <script>
 (function() {
