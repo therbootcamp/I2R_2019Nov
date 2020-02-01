@@ -76,22 +76,3 @@ class(my_vec)
 sum(my_vec, na.rm = TRUE)
 #> Wir erhalten eine Fehlermeldung, da die Klasse des Inputs nicht mit der Klasse
 #> des Outputs übereinstimmt.
-
-# Der folgende Code erstellt eine Matrix "my_mat" mit den Werten 1 bis 10 in zwei
-# Spalten.
-my_mat <- matrix(1:10, ncol = 2)
-
-# Überprüfe welche Klasse my_mat hat.
-class(my_mat)
-#> matrix
-
-# Berechne die Summe der Matrix.
-sum(my_mat)
-
-# Die sum() Funktion hat die Summe über alle Zellen der Matrix berechnet. Was wenn
-# wir nur die Summe pro Zeile wollen?
-sum(my_mat[1,])
-sum(my_mat[2,])
-#> ... Diese Art ist aber sehr umständlicher. Einfacher geht es mit rowSums().
-rowSums(my_mat)
-

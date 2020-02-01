@@ -30,7 +30,7 @@ my_vec <- c(my_vec, NA)
 
 # Berechne nun nochmals die Summe von my_vec. Was ist das Ergebnis und warum?
 
-# Wiederhole die Berechnung der letzten Aufgabe, so dass das Resultat 6 ergibt.
+# Wiederhole die Berechnung der letzten Aufgabe so, dass das Resultat 6 ergibt.
 
 ### Die Klasse des Inputs muss mit der vorgegebenen Klasse übereinstimmen ------
 
@@ -42,15 +42,4 @@ my_vec[4] <- "a"
 # Teste die Klasse von my_vec. Weshalb hat sich die Klasse geändert?
 
 # Berechne nochmals die Summe von my_vec. Was passiert und weshalb?
-
-# Der folgende Code erstellt eine Matrix "my_mat" mit den Werten 1 bis 10 in zwei
-# Spalten.
-my_mat <- matrix(1:10, ncol = 2)
-
-# Überprüfe welche Klasse my_mat hat.
-
-# Berechne die Summe der Matrix.
-
-# Die sum() Funktion hat die Summe über alle Zellen der Matrix berechnet. Was wenn
-# wir nur die Summe pro Zeile wollen?
 
